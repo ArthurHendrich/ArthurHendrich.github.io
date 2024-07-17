@@ -1,0 +1,177 @@
+
+
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <id>http://localhost:4000/arthurhendrich.github.io/</id>
+  <title></title>
+  <subtitle></subtitle>
+  <updated>2024-07-17T18:20:27-03:00</updated>
+  <author>
+    <name></name>
+    <uri>http://localhost:4000/arthurhendrich.github.io/</uri>
+  </author>
+  <link rel="self" type="application/atom+xml" href="http://localhost:4000/arthurhendrich.github.io/feed.xml"/>
+  <link rel="alternate" type="text/html" hreflang="en"
+    href="http://localhost:4000/arthurhendrich.github.io/"/>
+  <generator uri="https://jekyllrb.com/" version="4.3.3">Jekyll</generator>
+  <rights> © 2024  </rights>
+  <icon>arthurhendrich.github.io/assets/img/favicons/favicon.ico</icon>
+  <logo>arthurhendrich.github.io/assets/img/favicons/favicon-96x96.png</logo>
+
+
+  
+  <entry>
+    <title>Proving Grounds - ClamAV</title>
+    <link href="http://localhost:4000/arthurhendrich.github.io/posts/Proving-Grounds-ClamAV/" rel="alternate" type="text/html" title="Proving Grounds - ClamAV" />
+    <published>2024-07-14T00:00:00-03:00</published>
+  
+    <updated>2024-07-14T00:00:00-03:00</updated>
+  
+    <id>http://localhost:4000/arthurhendrich.github.io/posts/Proving-Grounds-ClamAV/</id>
+    <content src="http://localhost:4000/arthurhendrich.github.io/posts/Proving-Grounds-ClamAV/" />
+    <author>
+      <name></name>
+    </author>
+
+  
+    
+    <category term="Proving Grounds" />
+    
+    <category term="Easy" />
+    
+  
+
+  <summary>ClamAV was an insightful box to explore exploitation techniques for services like ClamAV-Milter.
+
+The process started with comprehensive information gathering, including a full port scan revealing various open ports.
+
+The HTTP enumeration led to identifying and decoding a binary message, providing a potential password.
+
+Enumeration of SNMP services helped identify the running ClamAV-Milter serv...</summary>
+
+  </entry>
+
+  
+  <entry>
+    <title>Proving Grounds - Exfiltrated</title>
+    <link href="http://localhost:4000/arthurhendrich.github.io/posts/Proving-Grounds-Exfiltrated/" rel="alternate" type="text/html" title="Proving Grounds - Exfiltrated" />
+    <published>2024-07-13T00:00:00-03:00</published>
+  
+    <updated>2024-07-13T00:00:00-03:00</updated>
+  
+    <id>http://localhost:4000/arthurhendrich.github.io/posts/Proving-Grounds-Exfiltrated/</id>
+    <content src="http://localhost:4000/arthurhendrich.github.io/posts/Proving-Grounds-Exfiltrated/" />
+    <author>
+      <name></name>
+    </author>
+
+  
+    
+    <category term="Proving Grounds" />
+    
+    <category term="Easy" />
+    
+  
+
+  <summary>Exfiltrated was a well-structured box that provided an excellent opportunity to exploit a Subrion CMS vulnerability and perform privilege escalation via an Exiftool exploit.
+
+Initial enumeration led to the discovery of Subrion CMS, and default credentials allowed for access to the admin panel.
+
+By exploiting a file upload vulnerability, a reverse shell was obtained. Further enumeration revealed...</summary>
+
+  </entry>
+
+  
+  <entry>
+    <title>Proving Grounds - Twiggy</title>
+    <link href="http://localhost:4000/arthurhendrich.github.io/posts/Proving-Grounds-Twiggy/" rel="alternate" type="text/html" title="Proving Grounds - Twiggy" />
+    <published>2024-07-12T00:00:00-03:00</published>
+  
+    <updated>2024-07-12T00:00:00-03:00</updated>
+  
+    <id>http://localhost:4000/arthurhendrich.github.io/posts/Proving-Grounds-Twiggy/</id>
+    <content src="http://localhost:4000/arthurhendrich.github.io/posts/Proving-Grounds-Twiggy/" />
+    <author>
+      <name></name>
+    </author>
+
+  
+    
+    <category term="Proving Grounds" />
+    
+    <category term="Easy" />
+    
+  
+
+  <summary>Twiggy was an insightful machine focused on exploiting a SaltStack vulnerability.
+
+The machine required initial enumeration to identify open services, followed by a specific focus on the web service running on port 8000.
+
+By identifying and leveraging the salt-api service, a known exploit for SaltStack 3000.1 was used to gain access and execute a reverse shell.
+
+This machine provided practical ...</summary>
+
+  </entry>
+
+  
+  <entry>
+    <title>Proving Grounds - Squid</title>
+    <link href="http://localhost:4000/arthurhendrich.github.io/posts/Proving-Grounds-Squid/" rel="alternate" type="text/html" title="Proving Grounds - Squid" />
+    <published>2024-07-11T00:00:00-03:00</published>
+  
+    <updated>2024-07-11T00:00:00-03:00</updated>
+  
+    <id>http://localhost:4000/arthurhendrich.github.io/posts/Proving-Grounds-Squid/</id>
+    <content src="http://localhost:4000/arthurhendrich.github.io/posts/Proving-Grounds-Squid/" />
+    <author>
+      <name></name>
+    </author>
+
+  
+    
+    <category term="Proving Grounds" />
+    
+    <category term="Easy" />
+    
+  
+
+  <summary>Squid was a challenging box that involved utilizing a Squid proxy to discover internal services, exploiting a phpMyAdmin file upload vulnerability to gain initial access, and then escalating privileges using Windows-specific techniques.
+
+The process included using spose to identify internal services, leveraging the proxy to access a WampServer, and ultimately using FullPowers.exe and PrintSpoof...</summary>
+
+  </entry>
+
+  
+  <entry>
+    <title>Proving Grounds - Fractal</title>
+    <link href="http://localhost:4000/arthurhendrich.github.io/posts/Proving-Grounds-Fractal/" rel="alternate" type="text/html" title="Proving Grounds - Fractal" />
+    <published>2024-07-10T00:00:00-03:00</published>
+  
+    <updated>2024-07-10T00:00:00-03:00</updated>
+  
+    <id>http://localhost:4000/arthurhendrich.github.io/posts/Proving-Grounds-Fractal/</id>
+    <content src="http://localhost:4000/arthurhendrich.github.io/posts/Proving-Grounds-Fractal/" />
+    <author>
+      <name></name>
+    </author>
+
+  
+    
+    <category term="Proving Grounds" />
+    
+    <category term="Easy" />
+    
+  
+
+  <summary>Fractal was an extremely useful box to learn and train my MySQL skills. It starts with identifying a Symfony CMS through HTTP enumeration.
+
+The Symfony profiler was explored, leading to finding sensitive files and obtaining database credentials.
+
+Using these credentials, a Symfony exploit script was executed to achieve Remote Code Execution (RCE) and gain a reverse shell.
+
+Privilege escalation ...</summary>
+
+  </entry>
+
+</feed>
+
+

@@ -1,0 +1,138 @@
+theme: jekyll-theme-chirpy
+lang: en
+
+timezone: America/Sao_Paulo
+
+jekyll-seo-tag:
+  title: H3NDR1CH
+  tagline: "Writeup's - Tools - Pentest Guide"
+  description: "H3NDR1CH is a blog about writeup's, tools, and pentest guide. Here you'll find the latest news, updates, and tutorials on cybersecurity."
+  url: "http://arthurhendrich.com"
+  github:
+    username: arthurhendrich
+  social:
+    name: H3NDR1CH
+    email: thebestguyfromwebbro@gmail.com
+    links:
+      - https://github.com/arthurhendrich
+      - https://www.linkedin.com/in/arthurhendrich
+
+avatar: "/commons/avatar.jpg"
+
+toc: true
+
+pwa:
+  enabled: true
+  cache:
+    enabled: true
+    deny_paths:
+      - "/example/*"
+
+paginate: 10
+
+theme_mode: dark
+
+baseurl: ""
+
+comments:
+  provider:
+  disqus:
+    shortname: h3ndr1ch
+  utterances:
+    repo: arthurhendrich/arthurhendrich.github.io
+    issue_term: 
+  giscus:
+    repo: arthurhendrich/arthurhendrich.github.io
+    repo_id:
+    category:
+    category_id:
+    mapping: 
+    strict: 
+    input_position: 
+    lang: 
+    reactions_enabled: 
+
+assets:
+  self_host:
+    enabled: 
+    env: production
+
+
+# ------------ The following options are not recommended to be modified ------------------
+kramdown:
+  footnote_backlink: "&#8617;&#xfe0e;"
+  syntax_highlighter: rouge
+  syntax_highlighter_opts:
+    css_class: highlight
+    span:
+      line_numbers: false
+    block:
+      line_numbers: true
+      start_line: 1
+
+collections:
+  tabs:
+    output: true
+    sort_by: order
+  app:
+    output: true
+    permalink: /:name
+
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: post
+      comments: true
+      toc: true
+      permalink: /posts/:title/
+  - scope:
+      path: _drafts
+    values:
+      comments: false
+  - scope:
+      path: ""
+      type: tabs
+    values:
+      layout: page
+      permalink: /:title/
+
+sass:
+  style: compressed
+
+compress_html:
+  clippings: all
+  comments: all
+  endings: all
+  profile: false
+  blanklines: false
+  ignore:
+    envs: [development]
+
+exclude:
+  - "*.gem"
+  - "*.gemspec"
+  - docs
+  - tools
+  - README.md
+  - LICENSE
+  - "*.config.js"
+  - package*.json
+
+jekyll-archives:
+  enabled: [categories, tags]
+  layouts:
+    category: category
+    tag: tag
+  permalinks:
+    tag: /tags/:name/
+    category: /categories/:name/
+
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+# development:
+#   auto_regen: true  
+#   watch: true
