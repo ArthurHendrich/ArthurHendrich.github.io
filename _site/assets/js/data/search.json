@@ -2,7 +2,7 @@
   
   {
     "title": "Proving Grounds - ClamAV",
-    "url": "/arthurhendrich.github.io/posts/Proving-Grounds-ClamAV/",
+    "url": "/posts/Proving-Grounds-ClamAV/",
     "categories": "Proving Grounds, Easy",
     "tags": "Linux, SNMP, ClamAV-Milter, OSCP",
     "date": "2024-07-14 00:00:00 -0300",
@@ -19,7 +19,7 @@
   
   {
     "title": "Proving Grounds - Exfiltrated",
-    "url": "/arthurhendrich.github.io/posts/Proving-Grounds-Exfiltrated/",
+    "url": "/posts/Proving-Grounds-Exfiltrated/",
     "categories": "Proving Grounds, Easy",
     "tags": "Linux, Web, Subrion, Exiftool, OSCP",
     "date": "2024-07-13 00:00:00 -0300",
@@ -36,7 +36,7 @@
   
   {
     "title": "Proving Grounds - Twiggy",
-    "url": "/arthurhendrich.github.io/posts/Proving-Grounds-Twiggy/",
+    "url": "/posts/Proving-Grounds-Twiggy/",
     "categories": "Proving Grounds, Easy",
     "tags": "Linux, Web, SaltStack, OSCP",
     "date": "2024-07-12 00:00:00 -0300",
@@ -53,7 +53,7 @@
   
   {
     "title": "Proving Grounds - Squid",
-    "url": "/arthurhendrich.github.io/posts/Proving-Grounds-Squid/",
+    "url": "/posts/Proving-Grounds-Squid/",
     "categories": "Proving Grounds, Easy",
     "tags": "Windows, Web, Squid, OSCP",
     "date": "2024-07-11 00:00:00 -0300",
@@ -70,7 +70,7 @@
   
   {
     "title": "Proving Grounds - Fractal",
-    "url": "/arthurhendrich.github.io/posts/Proving-Grounds-Fractal/",
+    "url": "/posts/Proving-Grounds-Fractal/",
     "categories": "Proving Grounds, Easy",
     "tags": "Linux, Web, Symfony, MySQL, OSCP",
     "date": "2024-07-10 00:00:00 -0300",

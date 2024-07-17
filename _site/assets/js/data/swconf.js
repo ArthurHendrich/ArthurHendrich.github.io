@@ -1,16 +1,16 @@
 const swconf = {
   
-    cacheName: 'chirpy-1721251228',resources: [
-      '/arthurhendrich.github.io/assets/css/jekyll-theme-chirpy.css',
-      '/arthurhendrich.github.io/',
+    cacheName: 'chirpy-1721252838',resources: [
+      '/assets/css/jekyll-theme-chirpy.css',
+      '/',
       
-        '/arthurhendrich.github.io/categories/',
+        '/categories/',
       
-        '/arthurhendrich.github.io/tags/',
+        '/tags/',
       
-        '/arthurhendrich.github.io/archives/',
+        '/archives/',
       
-        '/arthurhendrich.github.io/about/',
+        '/about/',
       
 
       
@@ -18,7 +18,7 @@ const swconf = {
     ],denyPaths: [
       
         
-          '/arthurhendrich.github.io/example/*'
+          '/example/*'
       
     ],
     purge: false

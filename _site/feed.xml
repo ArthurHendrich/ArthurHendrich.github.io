@@ -1,33 +1,33 @@
 
 
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <id>http://localhost:4000/arthurhendrich.github.io/</id>
+  <id>http://localhost:4000/</id>
   <title></title>
   <subtitle></subtitle>
-  <updated>2024-07-17T18:20:27-03:00</updated>
+  <updated>2024-07-17T18:47:17-03:00</updated>
   <author>
     <name></name>
-    <uri>http://localhost:4000/arthurhendrich.github.io/</uri>
+    <uri>http://localhost:4000/</uri>
   </author>
-  <link rel="self" type="application/atom+xml" href="http://localhost:4000/arthurhendrich.github.io/feed.xml"/>
+  <link rel="self" type="application/atom+xml" href="http://localhost:4000/feed.xml"/>
   <link rel="alternate" type="text/html" hreflang="en"
-    href="http://localhost:4000/arthurhendrich.github.io/"/>
+    href="http://localhost:4000/"/>
   <generator uri="https://jekyllrb.com/" version="4.3.3">Jekyll</generator>
   <rights> © 2024  </rights>
-  <icon>arthurhendrich.github.io/assets/img/favicons/favicon.ico</icon>
-  <logo>arthurhendrich.github.io/assets/img/favicons/favicon-96x96.png</logo>
+  <icon>/assets/img/favicons/favicon.ico</icon>
+  <logo>/assets/img/favicons/favicon-96x96.png</logo>
 
 
   
   <entry>
     <title>Proving Grounds - ClamAV</title>
-    <link href="http://localhost:4000/arthurhendrich.github.io/posts/Proving-Grounds-ClamAV/" rel="alternate" type="text/html" title="Proving Grounds - ClamAV" />
+    <link href="http://localhost:4000/posts/Proving-Grounds-ClamAV/" rel="alternate" type="text/html" title="Proving Grounds - ClamAV" />
     <published>2024-07-14T00:00:00-03:00</published>
   
     <updated>2024-07-14T00:00:00-03:00</updated>
   
-    <id>http://localhost:4000/arthurhendrich.github.io/posts/Proving-Grounds-ClamAV/</id>
-    <content src="http://localhost:4000/arthurhendrich.github.io/posts/Proving-Grounds-ClamAV/" />
+    <id>http://localhost:4000/posts/Proving-Grounds-ClamAV/</id>
+    <content src="http://localhost:4000/posts/Proving-Grounds-ClamAV/" />
     <author>
       <name></name>
     </author>
@@ -53,13 +53,13 @@ Enumeration of SNMP services helped identify the running ClamAV-Milter serv...</
   
   <entry>
     <title>Proving Grounds - Exfiltrated</title>
-    <link href="http://localhost:4000/arthurhendrich.github.io/posts/Proving-Grounds-Exfiltrated/" rel="alternate" type="text/html" title="Proving Grounds - Exfiltrated" />
+    <link href="http://localhost:4000/posts/Proving-Grounds-Exfiltrated/" rel="alternate" type="text/html" title="Proving Grounds - Exfiltrated" />
     <published>2024-07-13T00:00:00-03:00</published>
   
     <updated>2024-07-13T00:00:00-03:00</updated>
   
-    <id>http://localhost:4000/arthurhendrich.github.io/posts/Proving-Grounds-Exfiltrated/</id>
-    <content src="http://localhost:4000/arthurhendrich.github.io/posts/Proving-Grounds-Exfiltrated/" />
+    <id>http://localhost:4000/posts/Proving-Grounds-Exfiltrated/</id>
+    <content src="http://localhost:4000/posts/Proving-Grounds-Exfiltrated/" />
     <author>
       <name></name>
     </author>
@@ -83,13 +83,13 @@ By exploiting a file upload vulnerability, a reverse shell was obtained. Further
   
   <entry>
     <title>Proving Grounds - Twiggy</title>
-    <link href="http://localhost:4000/arthurhendrich.github.io/posts/Proving-Grounds-Twiggy/" rel="alternate" type="text/html" title="Proving Grounds - Twiggy" />
+    <link href="http://localhost:4000/posts/Proving-Grounds-Twiggy/" rel="alternate" type="text/html" title="Proving Grounds - Twiggy" />
     <published>2024-07-12T00:00:00-03:00</published>
   
     <updated>2024-07-12T00:00:00-03:00</updated>
   
-    <id>http://localhost:4000/arthurhendrich.github.io/posts/Proving-Grounds-Twiggy/</id>
-    <content src="http://localhost:4000/arthurhendrich.github.io/posts/Proving-Grounds-Twiggy/" />
+    <id>http://localhost:4000/posts/Proving-Grounds-Twiggy/</id>
+    <content src="http://localhost:4000/posts/Proving-Grounds-Twiggy/" />
     <author>
       <name></name>
     </author>
@@ -115,13 +115,13 @@ This machine provided practical ...</summary>
   
   <entry>
     <title>Proving Grounds - Squid</title>
-    <link href="http://localhost:4000/arthurhendrich.github.io/posts/Proving-Grounds-Squid/" rel="alternate" type="text/html" title="Proving Grounds - Squid" />
+    <link href="http://localhost:4000/posts/Proving-Grounds-Squid/" rel="alternate" type="text/html" title="Proving Grounds - Squid" />
     <published>2024-07-11T00:00:00-03:00</published>
   
     <updated>2024-07-11T00:00:00-03:00</updated>
   
-    <id>http://localhost:4000/arthurhendrich.github.io/posts/Proving-Grounds-Squid/</id>
-    <content src="http://localhost:4000/arthurhendrich.github.io/posts/Proving-Grounds-Squid/" />
+    <id>http://localhost:4000/posts/Proving-Grounds-Squid/</id>
+    <content src="http://localhost:4000/posts/Proving-Grounds-Squid/" />
     <author>
       <name></name>
     </author>
@@ -143,13 +143,13 @@ The process included using spose to identify internal services, leveraging the p
   
   <entry>
     <title>Proving Grounds - Fractal</title>
-    <link href="http://localhost:4000/arthurhendrich.github.io/posts/Proving-Grounds-Fractal/" rel="alternate" type="text/html" title="Proving Grounds - Fractal" />
+    <link href="http://localhost:4000/posts/Proving-Grounds-Fractal/" rel="alternate" type="text/html" title="Proving Grounds - Fractal" />
     <published>2024-07-10T00:00:00-03:00</published>
   
     <updated>2024-07-10T00:00:00-03:00</updated>
   
-    <id>http://localhost:4000/arthurhendrich.github.io/posts/Proving-Grounds-Fractal/</id>
-    <content src="http://localhost:4000/arthurhendrich.github.io/posts/Proving-Grounds-Fractal/" />
+    <id>http://localhost:4000/posts/Proving-Grounds-Fractal/</id>
+    <content src="http://localhost:4000/posts/Proving-Grounds-Fractal/" />
     <author>
       <name></name>
     </author>
