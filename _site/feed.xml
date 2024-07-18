@@ -4,7 +4,7 @@
   <id>http://localhost:4000/</id>
   <title></title>
   <subtitle></subtitle>
-  <updated>2024-07-17T18:47:17-03:00</updated>
+  <updated>2024-07-18T12:23:12-03:00</updated>
   <author>
     <name></name>
     <uri>http://localhost:4000/</uri>
@@ -17,6 +17,70 @@
   <icon>/assets/img/favicons/favicon.ico</icon>
   <logo>/assets/img/favicons/favicon-96x96.png</logo>
 
+
+  
+  <entry>
+    <title>Hack The Box - Conceal</title>
+    <link href="http://localhost:4000/posts/Hack-The-Box-Conceal/" rel="alternate" type="text/html" title="Hack The Box - Conceal" />
+    <published>2024-07-16T00:00:00-03:00</published>
+  
+    <updated>2024-07-16T00:00:00-03:00</updated>
+  
+    <id>http://localhost:4000/posts/Hack-The-Box-Conceal/</id>
+    <content src="http://localhost:4000/posts/Hack-The-Box-Conceal/" />
+    <author>
+      <name></name>
+    </author>
+
+  
+    
+    <category term="Hack The Box" />
+    
+    <category term="Hard" />
+    
+  
+
+  <summary>Conceal was an engaging box to delve into advanced exploitation techniques involving VPN configurations and Windows privilege escalation.
+
+The process began with thorough information gathering, starting with a full port scan that revealed various open UDP ports. Enumerating the ISAKMP and SNMP services provided critical insights, including a VPN password.
+
+Utilizing strongSwan, we configured a ...</summary>
+
+  </entry>
+
+  
+  <entry>
+    <title>Hack The Box - Surveillance</title>
+    <link href="http://localhost:4000/posts/Hack-The-Box-Surveillance/" rel="alternate" type="text/html" title="Hack The Box - Surveillance" />
+    <published>2024-07-15T00:00:00-03:00</published>
+  
+    <updated>2024-07-15T00:00:00-03:00</updated>
+  
+    <id>http://localhost:4000/posts/Hack-The-Box-Surveillance/</id>
+    <content src="http://localhost:4000/posts/Hack-The-Box-Surveillance/" />
+    <author>
+      <name></name>
+    </author>
+
+  
+    
+    <category term="Hack The Box" />
+    
+    <category term="Medium" />
+    
+  
+
+  <summary>Surveillance was a complex and challenging box that required multiple exploitation techniques, including leveraging vulnerabilities in CraftCMS and ZoneMinder, along with performing lateral movement and privilege escalation.
+
+Diagram
+
+graph TD
+    A[Information Gathering] --&amp;amp;gt;|Port Scan| B[Enumeration]
+    B --&amp;amp;gt; C[HTTP 80]
+    C --&amp;amp;gt; D[CraftCMS Exploitation]
+    D --&amp;amp;gt; E[Lateral Moveme...</summary>
+
+  </entry>
 
   
   <entry>
@@ -109,66 +173,6 @@ The machine required initial enumeration to identify open services, followed by 
 By identifying and leveraging the salt-api service, a known exploit for SaltStack 3000.1 was used to gain access and execute a reverse shell.
 
 This machine provided practical ...</summary>
-
-  </entry>
-
-  
-  <entry>
-    <title>Proving Grounds - Squid</title>
-    <link href="http://localhost:4000/posts/Proving-Grounds-Squid/" rel="alternate" type="text/html" title="Proving Grounds - Squid" />
-    <published>2024-07-11T00:00:00-03:00</published>
-  
-    <updated>2024-07-11T00:00:00-03:00</updated>
-  
-    <id>http://localhost:4000/posts/Proving-Grounds-Squid/</id>
-    <content src="http://localhost:4000/posts/Proving-Grounds-Squid/" />
-    <author>
-      <name></name>
-    </author>
-
-  
-    
-    <category term="Proving Grounds" />
-    
-    <category term="Easy" />
-    
-  
-
-  <summary>Squid was a challenging box that involved utilizing a Squid proxy to discover internal services, exploiting a phpMyAdmin file upload vulnerability to gain initial access, and then escalating privileges using Windows-specific techniques.
-
-The process included using spose to identify internal services, leveraging the proxy to access a WampServer, and ultimately using FullPowers.exe and PrintSpoof...</summary>
-
-  </entry>
-
-  
-  <entry>
-    <title>Proving Grounds - Fractal</title>
-    <link href="http://localhost:4000/posts/Proving-Grounds-Fractal/" rel="alternate" type="text/html" title="Proving Grounds - Fractal" />
-    <published>2024-07-10T00:00:00-03:00</published>
-  
-    <updated>2024-07-10T00:00:00-03:00</updated>
-  
-    <id>http://localhost:4000/posts/Proving-Grounds-Fractal/</id>
-    <content src="http://localhost:4000/posts/Proving-Grounds-Fractal/" />
-    <author>
-      <name></name>
-    </author>
-
-  
-    
-    <category term="Proving Grounds" />
-    
-    <category term="Easy" />
-    
-  
-
-  <summary>Fractal was an extremely useful box to learn and train my MySQL skills. It starts with identifying a Symfony CMS through HTTP enumeration.
-
-The Symfony profiler was explored, leading to finding sensitive files and obtaining database credentials.
-
-Using these credentials, a Symfony exploit script was executed to achieve Remote Code Execution (RCE) and gain a reverse shell.
-
-Privilege escalation ...</summary>
 
   </entry>
 

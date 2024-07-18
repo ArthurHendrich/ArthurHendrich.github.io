@@ -21,12 +21,11 @@ The exploitation phase involved searching for relevant exploits and utilizing a 
 ```mermaid
 graph TD
     A[Information Gathering] -->|Port Scan| B[Enumeration]
-    B -->|Identify HTTP| C[Explore HTTP Content]
-    C -->|Find Binary Info| D[Decode Password]
-    D -->|Enumerate SNMP| E[Identify ClamAV-Milter]
-    E -->|Search Exploits| F[Exploit ClamAV-Milter]
-    F -->|Execute Perl Script| G[Create Backdoor]
-    G -->|Connect via Netcat| H[Root Shell]
+    B --> C[HTTP 80]
+    C --> |Find Binary Info| D[Decode Binary]
+    B --> F[SNMP 199 & 25]
+    F --> G[Identify ClamAV-Milter]
+    G --> H[Exploit ClamAV-Milter] --> |Execute Perl Script| I[Root Shell]
 ```
 
 ## Information Gathering
