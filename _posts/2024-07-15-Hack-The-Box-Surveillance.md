@@ -1,7 +1,7 @@
 ---
 title: "Hack The Box - Surveillance"
-categories: [Hack The Box, Medium]
-tags: [Linux, WEB, CraftCMS, Zone Minder, HTB]
+categories: [CTF, Hack The Box]
+tags: [MEDIUM, Linux, WEB, CraftCMS, Zone Minder]
 mermaid: true
 image: ../assets/img/hackthebox/Surveillance/Surveillance.png
 ---

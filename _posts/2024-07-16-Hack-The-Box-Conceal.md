@@ -1,7 +1,7 @@
 ---
 title: "Hack The Box - Conceal"
-categories: [Hack The Box, Hard]
-tags: [Windows, SNMP, JuicyPotato, HTB]
+categories: [CTF, Hack The Box]
+tags: [HARD, Windows, SNMP, JuicyPotato]
 mermaid: true
 image: ../assets/img/hackthebox/Conceal/Conceal.png
 ---

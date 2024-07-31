@@ -4,7 +4,7 @@
   <id>http://localhost:4000/</id>
   <title></title>
   <subtitle></subtitle>
-  <updated>2024-07-18T12:23:12-03:00</updated>
+  <updated>2024-07-31T16:16:30-03:00</updated>
   <author>
     <name></name>
     <uri>http://localhost:4000/</uri>
@@ -17,6 +17,32 @@
   <icon>/assets/img/favicons/favicon.ico</icon>
   <logo>/assets/img/favicons/favicon-96x96.png</logo>
 
+
+  
+  <entry>
+    <title>Understanding Attack Serialization: An Introduction</title>
+    <link href="http://localhost:4000/posts/Attacking-Serialization/" rel="alternate" type="text/html" title="Understanding Attack Serialization: An Introduction" />
+    <published>2024-07-31T00:00:00-03:00</published>
+  
+    <updated>2024-07-31T00:00:00-03:00</updated>
+  
+    <id>http://localhost:4000/posts/Attacking-Serialization/</id>
+    <content src="http://localhost:4000/posts/Attacking-Serialization/" />
+    <author>
+      <name></name>
+    </author>
+
+  
+    
+    <category term="Study" />
+    
+    <category term="Attack Serialization" />
+    
+  
+
+  <summary>Today, we will discuss serialization and the risks associated with this technique. Serialization is a common technique used in software development to convert complex objects into a format that can be easily stored or transmitted. This process allows data to be saved in files, sent over networks, or passed between different components of an application. However, serialization also introduces si...</summary>
+
+  </entry>
 
   
   <entry>
@@ -34,9 +60,9 @@
 
   
     
-    <category term="Hack The Box" />
+    <category term="CTF" />
     
-    <category term="Hard" />
+    <category term="Hack The Box" />
     
   
 
@@ -64,9 +90,9 @@ Utilizing strongSwan, we configured a ...</summary>
 
   
     
-    <category term="Hack The Box" />
+    <category term="CTF" />
     
-    <category term="Medium" />
+    <category term="Hack The Box" />
     
   
 
@@ -88,7 +114,7 @@ graph TD
     <link href="http://localhost:4000/posts/Proving-Grounds-ClamAV/" rel="alternate" type="text/html" title="Proving Grounds - ClamAV" />
     <published>2024-07-14T00:00:00-03:00</published>
   
-    <updated>2024-07-14T00:00:00-03:00</updated>
+    <updated>2024-07-18T12:24:27-03:00</updated>
   
     <id>http://localhost:4000/posts/Proving-Grounds-ClamAV/</id>
     <content src="http://localhost:4000/posts/Proving-Grounds-ClamAV/" />
@@ -98,9 +124,9 @@ graph TD
 
   
     
-    <category term="Proving Grounds" />
+    <category term="CTF" />
     
-    <category term="Easy" />
+    <category term="Proving Grounds - Play" />
     
   
 
@@ -130,9 +156,9 @@ Enumeration of SNMP services helped identify the running ClamAV-Milter serv...</
 
   
     
-    <category term="Proving Grounds" />
+    <category term="CTF" />
     
-    <category term="Easy" />
+    <category term="Proving Grounds - Play" />
     
   
 
@@ -141,38 +167,6 @@ Enumeration of SNMP services helped identify the running ClamAV-Milter serv...</
 Initial enumeration led to the discovery of Subrion CMS, and default credentials allowed for access to the admin panel.
 
 By exploiting a file upload vulnerability, a reverse shell was obtained. Further enumeration revealed...</summary>
-
-  </entry>
-
-  
-  <entry>
-    <title>Proving Grounds - Twiggy</title>
-    <link href="http://localhost:4000/posts/Proving-Grounds-Twiggy/" rel="alternate" type="text/html" title="Proving Grounds - Twiggy" />
-    <published>2024-07-12T00:00:00-03:00</published>
-  
-    <updated>2024-07-12T00:00:00-03:00</updated>
-  
-    <id>http://localhost:4000/posts/Proving-Grounds-Twiggy/</id>
-    <content src="http://localhost:4000/posts/Proving-Grounds-Twiggy/" />
-    <author>
-      <name></name>
-    </author>
-
-  
-    
-    <category term="Proving Grounds" />
-    
-    <category term="Easy" />
-    
-  
-
-  <summary>Twiggy was an insightful machine focused on exploiting a SaltStack vulnerability.
-
-The machine required initial enumeration to identify open services, followed by a specific focus on the web service running on port 8000.
-
-By identifying and leveraging the salt-api service, a known exploit for SaltStack 3000.1 was used to gain access and execute a reverse shell.
-
-This machine provided practical ...</summary>
 
   </entry>
 
