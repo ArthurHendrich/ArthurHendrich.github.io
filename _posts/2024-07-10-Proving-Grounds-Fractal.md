@@ -3,7 +3,7 @@ title: "Proving Grounds - Fractal"
 categories: [CTF, Proving Grounds - Play]
 tags: [EASY, Linux, Web, Symfony, MySQL]
 mermaid: true
-image: ../assets/img/provingrounds/oscp.png
+image: ../assets/img/provingrounds/offsec.jpeg
 ---
 
 Fractal was an extremely useful box to learn and train my MySQL skills. It starts with identifying a Symfony CMS through HTTP enumeration. 

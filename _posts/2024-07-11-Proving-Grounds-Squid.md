@@ -3,7 +3,7 @@ title: "Proving Grounds - Squid"
 categories: [CTF, Proving Grounds - Play]
 tags: [EASY, Windows, Web, Squid, provingrounds]
 mermaid: true
-image: ../assets/img/provingrounds/oscp.png
+image: ../assets/img/provingrounds/offsec.jpeg
 ---
 
 Squid was a challenging box that involved utilizing a Squid proxy to discover internal services, exploiting a phpMyAdmin file upload vulnerability to gain initial access, and then escalating privileges using Windows-specific techniques.

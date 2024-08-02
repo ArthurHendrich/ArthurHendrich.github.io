@@ -3,7 +3,7 @@ title: "Proving Grounds - Twiggy"
 categories: [CTF, Proving Grounds - Play]
 tags: [EASY, Linux, Web, SaltStack]
 mermaid: true
-image: ../assets/img/provingrounds/oscp.png
+image: ../assets/img/provingrounds/offsec.jpeg
 ---
 
 Twiggy was an insightful machine focused on exploiting a SaltStack vulnerability. 

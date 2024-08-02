@@ -3,7 +3,7 @@ title: "Proving Grounds - ClamAV"
 categories: [CTF, Proving Grounds - Play]
 tags: [EASY, Linux, SNMP, ClamAV-Milter]
 mermaid: true
-image: ../assets/img/provingrounds/oscp.png
+image: ../assets/img/provingrounds/offsec.jpeg
 ---
 
 ClamAV was an insightful box to explore exploitation techniques for services like ClamAV-Milter.

@@ -3,7 +3,7 @@ title: "Proving Grounds - Exfiltrated"
 categories: [CTF, Proving Grounds - Play]
 tags: [EASY, Linux, Web, Subrion, Exiftool]
 mermaid: true
-image: ../assets/img/provingrounds/oscp.png
+image: ../assets/img/provingrounds/offsec.jpeg
 ---
 
 Exfiltrated was a well-structured box that provided an excellent opportunity to exploit a Subrion CMS vulnerability and perform privilege escalation via an Exiftool exploit. 
