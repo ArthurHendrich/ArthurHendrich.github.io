@@ -1,6 +1,8 @@
 /* The common styles */
 
 html {
+  transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out;
+  
   @media (prefers-color-scheme: light) {
     &:not([data-mode]),
     &[data-mode='light'] {
@@ -344,6 +346,12 @@ sup {
   border: 0;
   background: var(--card-bg);
   box-shadow: var(--card-shadow);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+  &:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--card-shadow), 0 5px 15px rgba(0, 0, 0, 0.1);
+  }
 
   &::before {
     @extend %rounded;
@@ -499,6 +507,12 @@ main {
   padding: 0 0.4rem;
   color: var(--text-muted-color);
   line-height: 1.3rem;
+  transition: all 0.3s ease;
+
+  &:hover {
+    background: var(--tag-hover);
+    transform: translateY(-1px);
+  }
 
   &:not(:last-child) {
     margin-right: 0.2rem;
@@ -677,6 +691,7 @@ $btn-mb: 0.5rem;
   left: 0;
   height: 100%;
   overflow-y: auto;
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   width: $sidebar-width;
   z-index: 99;
   background: var(--sidebar-bg);
