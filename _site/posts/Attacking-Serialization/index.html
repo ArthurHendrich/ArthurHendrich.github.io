@@ -29,21 +29,21 @@
   
 
   <!-- Begin Jekyll SEO tag v2.8.0 -->
-<meta name="generator" content="Jekyll v4.3.3" />
+<meta name="generator" content="Jekyll v4.3.4" />
 <meta property="og:title" content="Understanding Attack Serialization: An Introduction" />
 <meta property="og:locale" content="en" />
 <meta name="description" content="Today, we will discuss serialization and the risks associated with this technique. Serialization is a common technique used in software development to convert complex objects into a format that can be easily stored or transmitted. This process allows data to be saved in files, sent over networks, or passed between different components of an application. However, serialization also introduces significant security risks if not properly managed. When an application deserializes untrusted data, it becomes vulnerable to various attacks." />
 <meta property="og:description" content="Today, we will discuss serialization and the risks associated with this technique. Serialization is a common technique used in software development to convert complex objects into a format that can be easily stored or transmitted. This process allows data to be saved in files, sent over networks, or passed between different components of an application. However, serialization also introduces significant security risks if not properly managed. When an application deserializes untrusted data, it becomes vulnerable to various attacks." />
-<link rel="canonical" href="http://localhost:4000/posts/Attacking-Serialization/" />
-<meta property="og:url" content="http://localhost:4000/posts/Attacking-Serialization/" />
-<meta property="og:image" content="http://localhost:4000/../assets/img/study/attackserialization/attack.png" />
+<link rel="canonical" href="http://0.0.0.0:3000/posts/Attacking-Serialization/" />
+<meta property="og:url" content="http://0.0.0.0:3000/posts/Attacking-Serialization/" />
+<meta property="og:image" content="http://0.0.0.0:3000/../assets/img/study/attackserialization/attack.png" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2024-07-31T00:00:00-03:00" />
+<meta property="article:published_time" content="2024-07-31T00:00:00+00:00" />
 <meta name="twitter:card" content="summary_large_image" />
-<meta property="twitter:image" content="http://localhost:4000/../assets/img/study/attackserialization/attack.png" />
+<meta property="twitter:image" content="http://0.0.0.0:3000/../assets/img/study/attackserialization/attack.png" />
 <meta property="twitter:title" content="Understanding Attack Serialization: An Introduction" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2024-07-31T00:00:00-03:00","datePublished":"2024-07-31T00:00:00-03:00","description":"Today, we will discuss serialization and the risks associated with this technique. Serialization is a common technique used in software development to convert complex objects into a format that can be easily stored or transmitted. This process allows data to be saved in files, sent over networks, or passed between different components of an application. However, serialization also introduces significant security risks if not properly managed. When an application deserializes untrusted data, it becomes vulnerable to various attacks.","headline":"Understanding Attack Serialization: An Introduction","image":"http://localhost:4000/../assets/img/study/attackserialization/attack.png","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/posts/Attacking-Serialization/"},"url":"http://localhost:4000/posts/Attacking-Serialization/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2024-07-31T00:00:00+00:00","datePublished":"2024-07-31T00:00:00+00:00","description":"Today, we will discuss serialization and the risks associated with this technique. Serialization is a common technique used in software development to convert complex objects into a format that can be easily stored or transmitted. This process allows data to be saved in files, sent over networks, or passed between different components of an application. However, serialization also introduces significant security risks if not properly managed. When an application deserializes untrusted data, it becomes vulnerable to various attacks.","headline":"Understanding Attack Serialization: An Introduction","image":"http://0.0.0.0:3000/../assets/img/study/attackserialization/attack.png","mainEntityOfPage":{"@type":"WebPage","@id":"http://0.0.0.0:3000/posts/Attacking-Serialization/"},"url":"http://0.0.0.0:3000/posts/Attacking-Serialization/"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -3377,7 +3377,7 @@
 
 <time
   
-  data-ts="1722394800"
+  data-ts="1722384000"
   data-df="ll"
   
     data-bs-toggle="tooltip" data-bs-placement="bottom"
@@ -6346,7 +6346,7 @@ public class SerializeMaliciousObject {
 <span class="nx">s</span><span class="p">.</span><span class="nf">sendall</span><span class="p">(</span><span class="nx">data</span><span class="p">)</span>
 <span class="nx">s</span><span class="p">.</span><span class="nf">sendall</span><span class="p">(</span><span class="nx">data2</span><span class="p">)</span>
 
-<span class="nx">f</span> <span class="o">=</span> <span class="nf">open</span><span class="p">(</span><span class="nx">payload</span><span class="p">,</span> <span class="dl">"</span><span class="s2">rb</span><span class="dl">"</span><span class="p">)</span> <span class="err">#</span><span class="nx">ysoserial</span> <span class="nx">payload</span> <span class="nx">without</span> <span class="nx">first</span> <span class="mi">4</span> <span class="nx">bytes</span>
+<span class="nx">f</span> <span class="o">=</span> <span class="nf">open</span><span class="p">(</span><span class="nx">payload</span><span class="p">,</span> <span class="dl">"</span><span class="s2">rb</span><span class="dl">"</span><span class="p">)</span> <span class="nx">#ysoserial</span> <span class="nx">payload</span> <span class="nx">without</span> <span class="nx">first</span> <span class="mi">4</span> <span class="nx">bytes</span>
 <span class="nx">c</span> <span class="o">=</span> <span class="nx">f</span><span class="p">.</span><span class="nf">read</span><span class="p">()</span>
 <span class="nx">s</span><span class="p">.</span><span class="nf">send</span><span class="p">(</span><span class="nx">c</span><span class="p">[</span><span class="mi">4</span><span class="p">:])</span>
 </pre></td></tr></tbody></table></code></div></div>
@@ -6590,21 +6590,21 @@ public class SerializeMaliciousObject {
 
       
 
-      <a href="https://twitter.com/intent/tweet?text=Understanding%20Attack%20Serialization:%20An%20Introduction%20-%20&url=http%3A%2F%2Flocalhost%3A4000%2Fposts%2FAttacking-Serialization%2F" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Twitter" aria-label="Twitter">
+      <a href="https://twitter.com/intent/tweet?text=Understanding%20Attack%20Serialization:%20An%20Introduction%20-%20&url=http%3A%2F%2F0.0.0.0%3A3000%2Fposts%2FAttacking-Serialization%2F" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Twitter" aria-label="Twitter">
         <i class="fa-fw fa-brands fa-square-x-twitter"></i>
       </a>
     
 
       
 
-      <a href="https://www.facebook.com/sharer/sharer.php?title=Understanding%20Attack%20Serialization:%20An%20Introduction%20-%20&u=http%3A%2F%2Flocalhost%3A4000%2Fposts%2FAttacking-Serialization%2F" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Facebook" aria-label="Facebook">
+      <a href="https://www.facebook.com/sharer/sharer.php?title=Understanding%20Attack%20Serialization:%20An%20Introduction%20-%20&u=http%3A%2F%2F0.0.0.0%3A3000%2Fposts%2FAttacking-Serialization%2F" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Facebook" aria-label="Facebook">
         <i class="fa-fw fab fa-facebook-square"></i>
       </a>
     
 
       
 
-      <a href="https://t.me/share/url?url=http%3A%2F%2Flocalhost%3A4000%2Fposts%2FAttacking-Serialization%2F&text=Understanding%20Attack%20Serialization:%20An%20Introduction%20-%20" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Telegram" aria-label="Telegram">
+      <a href="https://t.me/share/url?url=http%3A%2F%2F0.0.0.0%3A3000%2Fposts%2FAttacking-Serialization%2F&text=Understanding%20Attack%20Serialization:%20An%20Introduction%20-%20" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Telegram" aria-label="Telegram">
         <i class="fa-fw fab fa-telegram"></i>
       </a>
     
@@ -7290,7 +7290,7 @@ public class SerializeMaliciousObject {
   class="d-flex flex-column justify-content-center text-muted flex-lg-row justify-content-lg-between align-items-lg-center pb-lg-3"
 >
   <p>
-    © <time>2024</time>
+    © <time>2025</time>
 
     
     <a href="https://github.com/arthurhendrich"

@@ -1,0 +1,26 @@
+modules = ["web", "nodejs-20", "bash", "ruby-3.2"]
+run = "node index.js"
+
+[nix]
+channel = "stable-24_05"
+
+[deployment]
+run = ["sh", "-c", "node index.js"]
+
+[workflows]
+
+[[workflows.workflow]]
+name = "Run"
+mode = "sequential"
+author = 13256445
+
+[[workflows.workflow.tasks]]
+task = "packager.installForAll"
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "bundle exec jekyll serve --host 0.0.0.0 --port 3000"
+
+[[ports]]
+localPort = 3000
+externalPort = 80

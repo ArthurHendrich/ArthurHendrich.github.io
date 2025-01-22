@@ -1,19 +1,19 @@
 
 
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <id>http://localhost:4000/</id>
+  <id>http://0.0.0.0:3000/</id>
   <title></title>
   <subtitle></subtitle>
-  <updated>2024-08-02T15:33:02-03:00</updated>
+  <updated>2025-01-22T22:08:12+00:00</updated>
   <author>
     <name></name>
-    <uri>http://localhost:4000/</uri>
+    <uri>http://0.0.0.0:3000/</uri>
   </author>
-  <link rel="self" type="application/atom+xml" href="http://localhost:4000/feed.xml"/>
+  <link rel="self" type="application/atom+xml" href="http://0.0.0.0:3000/feed.xml"/>
   <link rel="alternate" type="text/html" hreflang="en"
-    href="http://localhost:4000/"/>
-  <generator uri="https://jekyllrb.com/" version="4.3.3">Jekyll</generator>
-  <rights> © 2024  </rights>
+    href="http://0.0.0.0:3000/"/>
+  <generator uri="https://jekyllrb.com/" version="4.3.4">Jekyll</generator>
+  <rights> © 2025  </rights>
   <icon>/assets/img/favicons/favicon.ico</icon>
   <logo>/assets/img/favicons/favicon-96x96.png</logo>
 
@@ -21,13 +21,13 @@
   
   <entry>
     <title>Understanding Attack Serialization: An Introduction</title>
-    <link href="http://localhost:4000/posts/Attacking-Serialization/" rel="alternate" type="text/html" title="Understanding Attack Serialization: An Introduction" />
-    <published>2024-07-31T00:00:00-03:00</published>
+    <link href="http://0.0.0.0:3000/posts/Attacking-Serialization/" rel="alternate" type="text/html" title="Understanding Attack Serialization: An Introduction" />
+    <published>2024-07-31T00:00:00+00:00</published>
   
-    <updated>2024-07-31T00:00:00-03:00</updated>
+    <updated>2024-07-31T00:00:00+00:00</updated>
   
-    <id>http://localhost:4000/posts/Attacking-Serialization/</id>
-    <content src="http://localhost:4000/posts/Attacking-Serialization/" />
+    <id>http://0.0.0.0:3000/posts/Attacking-Serialization/</id>
+    <content src="http://0.0.0.0:3000/posts/Attacking-Serialization/" />
     <author>
       <name></name>
     </author>
@@ -47,13 +47,13 @@
   
   <entry>
     <title>Hack The Box - Conceal</title>
-    <link href="http://localhost:4000/posts/Hack-The-Box-Conceal/" rel="alternate" type="text/html" title="Hack The Box - Conceal" />
-    <published>2024-07-16T00:00:00-03:00</published>
+    <link href="http://0.0.0.0:3000/posts/Hack-The-Box-Conceal/" rel="alternate" type="text/html" title="Hack The Box - Conceal" />
+    <published>2024-07-16T00:00:00+00:00</published>
   
-    <updated>2024-07-31T16:19:57-03:00</updated>
+    <updated>2024-07-31T19:19:57+00:00</updated>
   
-    <id>http://localhost:4000/posts/Hack-The-Box-Conceal/</id>
-    <content src="http://localhost:4000/posts/Hack-The-Box-Conceal/" />
+    <id>http://0.0.0.0:3000/posts/Hack-The-Box-Conceal/</id>
+    <content src="http://0.0.0.0:3000/posts/Hack-The-Box-Conceal/" />
     <author>
       <name></name>
     </author>
@@ -77,13 +77,13 @@ Utilizing strongSwan, we configured a ...</summary>
   
   <entry>
     <title>Hack The Box - Surveillance</title>
-    <link href="http://localhost:4000/posts/Hack-The-Box-Surveillance/" rel="alternate" type="text/html" title="Hack The Box - Surveillance" />
-    <published>2024-07-15T00:00:00-03:00</published>
+    <link href="http://0.0.0.0:3000/posts/Hack-The-Box-Surveillance/" rel="alternate" type="text/html" title="Hack The Box - Surveillance" />
+    <published>2024-07-15T00:00:00+00:00</published>
   
-    <updated>2024-07-31T16:19:57-03:00</updated>
+    <updated>2024-07-31T19:19:57+00:00</updated>
   
-    <id>http://localhost:4000/posts/Hack-The-Box-Surveillance/</id>
-    <content src="http://localhost:4000/posts/Hack-The-Box-Surveillance/" />
+    <id>http://0.0.0.0:3000/posts/Hack-The-Box-Surveillance/</id>
+    <content src="http://0.0.0.0:3000/posts/Hack-The-Box-Surveillance/" />
     <author>
       <name></name>
     </author>
@@ -111,13 +111,13 @@ graph TD
   
   <entry>
     <title>Proving Grounds - ClamAV</title>
-    <link href="http://localhost:4000/posts/Proving-Grounds-ClamAV/" rel="alternate" type="text/html" title="Proving Grounds - ClamAV" />
-    <published>2024-07-14T00:00:00-03:00</published>
+    <link href="http://0.0.0.0:3000/posts/Proving-Grounds-ClamAV/" rel="alternate" type="text/html" title="Proving Grounds - ClamAV" />
+    <published>2024-07-14T00:00:00+00:00</published>
   
-    <updated>2024-07-31T16:48:49-03:00</updated>
+    <updated>2024-08-02T18:33:44+00:00</updated>
   
-    <id>http://localhost:4000/posts/Proving-Grounds-ClamAV/</id>
-    <content src="http://localhost:4000/posts/Proving-Grounds-ClamAV/" />
+    <id>http://0.0.0.0:3000/posts/Proving-Grounds-ClamAV/</id>
+    <content src="http://0.0.0.0:3000/posts/Proving-Grounds-ClamAV/" />
     <author>
       <name></name>
     </author>
@@ -143,13 +143,13 @@ Enumeration of SNMP services helped identify the running ClamAV-Milter serv...</
   
   <entry>
     <title>Proving Grounds - Exfiltrated</title>
-    <link href="http://localhost:4000/posts/Proving-Grounds-Exfiltrated/" rel="alternate" type="text/html" title="Proving Grounds - Exfiltrated" />
-    <published>2024-07-13T00:00:00-03:00</published>
+    <link href="http://0.0.0.0:3000/posts/Proving-Grounds-Exfiltrated/" rel="alternate" type="text/html" title="Proving Grounds - Exfiltrated" />
+    <published>2024-07-13T00:00:00+00:00</published>
   
-    <updated>2024-07-31T16:48:49-03:00</updated>
+    <updated>2024-08-02T18:33:44+00:00</updated>
   
-    <id>http://localhost:4000/posts/Proving-Grounds-Exfiltrated/</id>
-    <content src="http://localhost:4000/posts/Proving-Grounds-Exfiltrated/" />
+    <id>http://0.0.0.0:3000/posts/Proving-Grounds-Exfiltrated/</id>
+    <content src="http://0.0.0.0:3000/posts/Proving-Grounds-Exfiltrated/" />
     <author>
       <name></name>
     </author>

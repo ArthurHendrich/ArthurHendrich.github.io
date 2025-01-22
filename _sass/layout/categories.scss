@@ -9,10 +9,31 @@
 .categories {
   margin-bottom: 2rem;
   border-color: var(--categories-border);
+  transition: all 0.3s ease;
 
   &.card,
   .list-group {
     @extend %rounded;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+
+  .card-header {
+    background: var(--card-bg);
+    border-bottom: 2px solid var(--categories-border);
+    transition: all 0.3s ease;
+
+    &:hover {
+      background: var(--categories-hover-bg);
+    }
+  }
+
+  .list-group-item {
+    transition: all 0.3s ease;
+    
+    &:hover {
+      background: var(--categories-hover-bg);
+      transform: translateX(5px);
+    }
   }
 
   .card-header {
@@ -51,11 +72,16 @@
 } /* .categories */
 
 .category-trigger {
-  width: 1.7rem;
-  height: 1.7rem;
+  width: 2rem;
+  height: 2rem;
   border-radius: 50%;
   text-align: center;
-  color: #6c757d !important;
+  color: var(--text-color) !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  background: var(--categories-hover-bg);
 
   i {
     position: relative;
